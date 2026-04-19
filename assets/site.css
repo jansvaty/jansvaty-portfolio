@@ -595,10 +595,11 @@ h3 {
   display: grid;
   gap: 2rem;
   align-content: center;
+  width: 100%;
 }
 
 .home-project-content p {
-  max-width: 26ch;
+  max-width: none;
   font-family: "Nunito", sans-serif;
   font-size: clamp(1.35rem, 2.2vw, 2.1rem);
   line-height: 1.45;
