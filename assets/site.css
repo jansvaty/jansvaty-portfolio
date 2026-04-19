@@ -489,16 +489,9 @@ h3 {
 
 .home-hero h1 {
   max-width: none;
-  font-size: clamp(3.2rem, 6.2vw, 6.2rem);
-  line-height: 0.96;
+  font-size: clamp(2rem, 3.8vw, 4.1rem);
+  line-height: 0.94;
   text-transform: uppercase;
-}
-
-.home-hero h1 .hero-line {
-  display: block;
-}
-
-.home-hero h1 .hero-line-one {
   white-space: nowrap;
 }
 
@@ -810,7 +803,8 @@ h3 {
   }
 
   .home-hero h1 {
-    font-size: clamp(2.7rem, 11vw, 4.2rem);
+    font-size: clamp(2.3rem, 10vw, 3.8rem);
+    white-space: normal;
   }
 
   .home-divider {
