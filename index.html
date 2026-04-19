@@ -7,115 +7,120 @@
   <meta name="description" content="Portfolio of Jan Svaty, a digital designer based between Prague and New Zealand.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/site.css">
   <script src="assets/site.js" defer></script>
 </head>
-<body>
-  <div class="site-shell">
-    <header class="site-header">
-      <a class="brand" href="index.html">Jan Svaty</a>
+<body class="home-page">
+  <div class="site-shell home-shell">
+    <header class="site-header home-header">
+      <a class="brand home-brand" href="index.html" aria-label="Jan Svaty home">JS</a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" class="site-nav">
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="mailto:jan.svaty@gmail.com">Email</a>
+        <a href="about.html">Learn about me</a>
+        <a href="https://www.linkedin.com/in/jansvaty/" target="_blank" rel="noreferrer">in</a>
+        <a class="button button-outline" href="contact.html">Contact me</a>
       </nav>
     </header>
 
     <main>
-      <section class="hero reveal">
-        <div class="hero-copy">
-          <p class="eyebrow">Digital designer</p>
-          <h1>Designing clear, useful digital experiences from Prague to Aotearoa.</h1>
-          <p class="lede">I’m Jan Svaty, a product and UX designer with experience across education, investing, public service, and design systems.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#work">View case studies</a>
-            <a class="button button-secondary" href="about.html">Learn about me</a>
-          </div>
-        </div>
-        <aside class="hero-panel">
-          <p>Current focus</p>
-          <ul class="stat-list">
-            <li><strong>UX/UI design</strong><span>Research-led interfaces and service flows</span></li>
-            <li><strong>Design systems</strong><span>Reusable foundations for product teams</span></li>
-            <li><strong>Learning design</strong><span>Clearer content for complex topics</span></li>
-          </ul>
-        </aside>
-      </section>
-
-      <section id="work" class="section reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Case studies</p>
-          <h2>Selected work</h2>
-        </div>
-
-        <div class="card-grid">
-          <article class="project-card">
-            <img src="assets/images/home-sharesies.png" alt="Sharesies project preview">
-            <div class="project-body">
-              <p class="project-meta">Sharesies • 2022</p>
-              <h3>Investing 101</h3>
-              <p>I led discovery into the barriers that stop first-time investors from getting started, then helped shape an educational hub with practical learning tools.</p>
-              <a class="text-link" href="sharesies-investing-101.html">Open project</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <img src="assets/images/home-impact.png" alt="Impact Investing Network project preview">
-            <div class="project-body">
-              <p class="project-meta">Impact Investing Network • 2021</p>
-              <h3>Web Redesign</h3>
-              <p>We reworked information architecture, navigation, and brand expression for New Zealand’s only impact investing non-profit.</p>
-              <a class="text-link" href="impact-investing-network.html">Open project</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <img src="assets/images/home-stake.png" alt="Stake design system preview">
-            <div class="project-body">
-              <p class="project-meta">Stake • 2022</p>
-              <h3>Design System</h3>
-              <p>A reusable design language for a fast-growing investing platform, built to tighten consistency and communication across teams.</p>
-              <a class="text-link" href="stake-design-system.html">Open project</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <img src="assets/images/home-customs.png" alt="New Zealand Customs resources preview">
-            <div class="project-body">
-              <p class="project-meta">New Zealand Customs Service</p>
-              <h3>Resources</h3>
-              <p>Internal design and learning resources created to help stakeholders understand process, research, and evaluation more clearly.</p>
-              <a class="text-link" href="customs-resources.html">Open project</a>
-            </div>
-          </article>
+      <section class="home-hero reveal">
+        <div class="home-hero-copy">
+          <p class="home-intro">👋 I'm Jan Svaty,</p>
+          <h1>A <span>digital designer</span> from Prague</h1>
         </div>
       </section>
 
-      <section class="section reveal">
-        <div class="split-layout">
-          <div>
-            <p class="eyebrow">About</p>
-            <h2>Background across hospitality, public service, and digital design.</h2>
+      <section id="work" class="home-work reveal">
+        <div class="home-divider" aria-hidden="true">
+          <svg viewBox="0 0 1440 220" preserveAspectRatio="none" role="presentation">
+            <path d="M0,120 C200,155 410,205 660,165 C930,120 1130,55 1440,115 L1440,220 L0,220 Z"></path>
+          </svg>
+        </div>
+        <div class="home-work-inner">
+          <div class="section-heading home-section-heading">
+            <p class="eyebrow">Case studies</p>
           </div>
-          <div>
-            <p>My path into design has not been conventional. That’s useful. It means I bring service thinking, operational pragmatism, and strong communication into the work, not just screen craft.</p>
-            <a class="button button-secondary" href="about.html">Read full background</a>
+
+          <div class="home-project-list">
+            <article class="home-project home-project-sharesies">
+              <p class="home-project-title">Sharesies: Investing 101</p>
+              <div class="home-project-panel">
+                <div class="home-project-media">
+                  <img src="assets/images/home-sharesies.png" alt="Sharesies project preview">
+                </div>
+                <div class="home-project-content">
+                  <p>I led a three-month project for Sharesies focused on discovering and understanding barriers that prospective investors face when starting their investing journey. Our team addressed them by developing an educational hub with targeted resources, a calculation tool and comprehensive training module.</p>
+                  <a class="button button-dark" href="sharesies-investing-101.html">Open project</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="home-project home-project-customs">
+              <p class="home-project-title">New Zealand Customs Service: Unclassified Projects</p>
+              <div class="home-project-panel home-project-panel-customs">
+                <div class="home-project-media">
+                  <img src="assets/images/home-customs.png" alt="New Zealand Customs project preview">
+                </div>
+                <div class="home-project-content home-project-content-split">
+                  <div class="home-project-links">
+                    <div class="home-project-link-row">
+                      <span>Welcome to Customs</span>
+                      <a class="button button-dark" href="customs-resources.html">Open project</a>
+                    </div>
+                    <div class="home-project-link-row">
+                      <span>Resources</span>
+                      <a class="button button-dark" href="customs-resources.html">Open project</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="home-project home-project-stake">
+              <p class="home-project-title">Stake: Design System</p>
+              <div class="home-project-panel">
+                <div class="home-project-media">
+                  <img src="assets/images/home-stake.png" alt="Stake design system preview">
+                </div>
+                <div class="home-project-content">
+                  <p>For this project, I developed a design system for Hello Stake Investing Broker. The aim was to help Stake streamline their internal and external communication during the development process and give their digital assets a structure.</p>
+                  <a class="button button-dark" href="stake-design-system.html">Open project</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="home-project home-project-impact">
+              <p class="home-project-title">Impact Investing Network: Web redesign</p>
+              <div class="home-project-panel">
+                <div class="home-project-media">
+                  <img src="assets/images/home-impact.png" alt="Impact Investing Network project preview">
+                </div>
+                <div class="home-project-content">
+                  <p>For the Impact Investing Network (IIN), New Zealand's only non-profit organization of its kind, our team redesigned their web interface to better support their mission of contributing to a sustainable, equitable, and prosperous Aotearoa through investment education.</p>
+                  <a class="button button-dark" href="impact-investing-network.html">Open project</a>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer reveal">
-      <div>
-        <p class="eyebrow">Location</p>
-        <p>Prague, Vancouver, Calgary, Auckland, Wellington & remote</p>
+    <footer class="site-footer home-footer reveal">
+      <div class="home-footer-block">
+        <p class="eyebrow">Reach out</p>
+        <a class="home-linkedin" href="https://www.linkedin.com/in/jansvaty/" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
       </div>
-      <div>
+      <div class="home-footer-block">
+        <p class="eyebrow">Location</p>
+        <p class="home-location-old">Prague, Vancouver, Calgary, Auckland</p>
+        <p class="home-location-current">Wellington &amp; remote</p>
+      </div>
+      <div class="home-footer-block">
         <p class="eyebrow">Contact</p>
         <a class="footer-link" href="mailto:jan.svaty@gmail.com">jan.svaty@gmail.com</a>
-        <a class="footer-link" href="https://www.linkedin.com/in/jansvaty/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="footer-link" href="tel:+64223579093">+64 22-357-9093</a>
       </div>
     </footer>
   </div>

@@ -10,6 +10,13 @@
   --accent-soft: #f0d7ca;
   --shadow: 0 24px 60px rgba(41, 22, 12, 0.08);
   --radius: 28px;
+  --ink-dark: #202126;
+  --ink-soft: #3d4048;
+  --home-pink: #c23d67;
+  --home-blue: #556c9f;
+  --home-green: #57a07f;
+  --home-outline: #f6f1ee;
+  --home-link: #4f68a9;
 }
 
 * {
@@ -28,6 +35,10 @@ body {
     radial-gradient(circle at top left, rgba(201, 93, 61, 0.16), transparent 30%),
     radial-gradient(circle at top right, rgba(35, 118, 120, 0.1), transparent 24%),
     linear-gradient(180deg, #fcf8f1 0%, var(--bg) 100%);
+}
+
+body.home-page {
+  background: #fcfbfa;
 }
 
 img {
@@ -228,6 +239,31 @@ h3 {
   background: rgba(255, 255, 255, 0.58);
 }
 
+.button-outline,
+.button-dark {
+  border-radius: 999px;
+}
+
+.button-outline {
+  min-height: 3.75rem;
+  padding-inline: 1.8rem;
+  border: 2px solid var(--home-link);
+  color: var(--home-link);
+  background: transparent;
+}
+
+.button-dark {
+  min-width: 13rem;
+  min-height: 5rem;
+  padding-inline: 2rem;
+  background: var(--ink-soft);
+  border: 4px solid var(--home-outline);
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
 .hero-panel,
 .detail-card,
 .timeline-item {
@@ -362,6 +398,294 @@ h3 {
   transform: translateY(0);
 }
 
+.home-shell {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+
+.home-header,
+.home-footer {
+  width: min(1680px, calc(100% - 4rem));
+  margin-inline: auto;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.home-header {
+  position: relative;
+  top: 0;
+  padding: 1rem 0 0;
+  margin-bottom: 0;
+}
+
+.home-brand {
+  display: grid;
+  place-items: center;
+  width: 4rem;
+  aspect-ratio: 1;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.4rem;
+  letter-spacing: 0.03em;
+  border: 3px solid #111;
+  border-radius: 1.2rem 1.2rem 2rem 2rem;
+  color: #111;
+}
+
+.home-header .site-nav {
+  gap: 2rem;
+}
+
+.home-header .site-nav a {
+  color: #d9577b;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.home-header .site-nav a.button-outline {
+  color: var(--home-link);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.home-hero {
+  width: min(1680px, calc(100% - 4rem));
+  min-height: 30rem;
+  margin: 3.2rem auto 0;
+  display: grid;
+  align-items: center;
+}
+
+.home-hero-copy {
+  max-width: 62rem;
+  padding-left: clamp(2rem, 6vw, 6.5rem);
+}
+
+.home-intro,
+.home-hero h1,
+.home-project-title,
+.home-project-link-row span,
+.home-location-current,
+.home-location-old,
+.home-footer .eyebrow {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.01em;
+  color: var(--ink-dark);
+}
+
+.home-intro {
+  margin-bottom: 0.35rem;
+  font-size: clamp(3rem, 5vw, 4.6rem);
+  color: var(--ink-dark);
+}
+
+.home-hero h1 {
+  max-width: 12ch;
+  font-size: clamp(3.6rem, 7vw, 6.6rem);
+  line-height: 0.96;
+  text-transform: uppercase;
+}
+
+.home-hero h1 span {
+  color: var(--home-pink);
+}
+
+.home-work {
+  padding: 0;
+}
+
+.home-divider {
+  margin-top: -1rem;
+  line-height: 0;
+}
+
+.home-divider svg {
+  display: block;
+  width: 100%;
+  height: clamp(9rem, 18vw, 14rem);
+  fill: var(--ink-dark);
+}
+
+.home-work-inner {
+  margin-top: -1px;
+  padding: 0 0 5rem;
+  background: var(--ink-dark);
+}
+
+.home-section-heading {
+  width: min(1680px, calc(100% - 4rem));
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.home-section-heading .eyebrow {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(3.2rem, 5vw, 5rem);
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.home-project-list {
+  width: min(1680px, calc(100% - 4rem));
+  margin: 0 auto;
+  display: grid;
+  gap: 3.5rem;
+}
+
+.home-project-title {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 3vw, 3.1rem);
+  line-height: 0.98;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.home-project-panel {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.35fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: center;
+  padding: clamp(1.5rem, 3vw, 3rem);
+  border: 8px solid var(--home-outline);
+  border-radius: 3rem;
+}
+
+.home-project-sharesies .home-project-panel {
+  background: var(--home-pink);
+}
+
+.home-project-customs .home-project-panel {
+  background: var(--home-blue);
+}
+
+.home-project-stake .home-project-panel {
+  background: #000;
+}
+
+.home-project-impact .home-project-panel {
+  background: var(--home-green);
+}
+
+.home-project-panel-customs {
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.4fr);
+}
+
+.home-project-media {
+  display: grid;
+  place-items: center;
+}
+
+.home-project-media img {
+  width: 100%;
+  max-width: 26rem;
+  max-height: 27rem;
+  object-fit: contain;
+}
+
+.home-project-content {
+  display: grid;
+  gap: 2rem;
+  align-content: center;
+}
+
+.home-project-content p {
+  max-width: 26ch;
+  font-family: "Nunito", sans-serif;
+  font-size: clamp(1.35rem, 2.2vw, 2.1rem);
+  line-height: 1.45;
+  color: #fff;
+  font-weight: 700;
+}
+
+.home-project-content .button-dark {
+  justify-self: end;
+}
+
+.home-project-content-split {
+  min-height: 100%;
+}
+
+.home-project-links {
+  display: grid;
+  gap: 4.5rem;
+}
+
+.home-project-link-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.home-project-link-row span {
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.home-footer {
+  margin-top: 0;
+  padding: 5rem 0 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  background: var(--ink-dark);
+  border-radius: 0;
+}
+
+.home-footer-block {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.home-footer .eyebrow {
+  font-size: clamp(2rem, 3vw, 3rem);
+  color: #fff;
+}
+
+.home-footer .footer-link,
+.home-linkedin {
+  font-family: "Nunito", sans-serif;
+  font-size: clamp(1.3rem, 2vw, 2.1rem);
+  color: #f1f0ef;
+}
+
+.home-linkedin {
+  display: grid;
+  place-items: center;
+  width: 4.4rem;
+  aspect-ratio: 1;
+  font-size: 2.4rem;
+  font-weight: 800;
+  border-radius: 1rem;
+  background: #3f88cc;
+  text-transform: lowercase;
+}
+
+.home-location-old,
+.home-location-current {
+  font-size: clamp(1.9rem, 3vw, 3rem);
+}
+
+.home-location-old {
+  position: relative;
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;
+}
+
+.home-location-current {
+  color: #fff;
+  border: 3px solid rgba(217, 87, 123, 0.9);
+  border-radius: 999px;
+  padding: 0.35rem 1rem;
+}
+
 @media (max-width: 900px) {
   .hero,
   .page-hero,
@@ -374,6 +698,26 @@ h3 {
 
   .project-card img {
     height: 220px;
+  }
+
+  .home-project-panel,
+  .home-project-panel-customs,
+  .home-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .home-project-content .button-dark {
+    justify-self: start;
+  }
+
+  .home-project-link-row {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  .home-footer-block {
+    justify-items: start;
+    text-align: left;
   }
 }
 
@@ -414,5 +758,86 @@ h3 {
 
   .site-footer {
     flex-direction: column;
+  }
+
+  .home-header,
+  .home-hero,
+  .home-section-heading,
+  .home-project-list,
+  .home-footer {
+    width: min(100% - 1.5rem, 1680px);
+  }
+
+  .home-header {
+    padding-top: 0.8rem;
+  }
+
+  .home-header .nav-toggle {
+    color: var(--ink-dark);
+  }
+
+  .home-header .site-nav {
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 0.75rem;
+  }
+
+  .home-hero {
+    min-height: 22rem;
+    margin-top: 1.5rem;
+  }
+
+  .home-hero-copy {
+    padding-left: 0;
+  }
+
+  .home-intro {
+    font-size: clamp(2.2rem, 10vw, 3.3rem);
+  }
+
+  .home-hero h1 {
+    font-size: clamp(3rem, 13vw, 4.5rem);
+  }
+
+  .home-divider {
+    margin-top: 2rem;
+  }
+
+  .home-project-panel {
+    padding: 1.25rem;
+    border-width: 6px;
+    border-radius: 2rem;
+  }
+
+  .home-project-title,
+  .home-section-heading .eyebrow {
+    font-size: clamp(2.1rem, 10vw, 3.4rem);
+  }
+
+  .button-dark {
+    width: 100%;
+    min-width: 0;
+    min-height: 4.2rem;
+  }
+
+  .home-project-content p {
+    max-width: none;
+    font-size: 1.2rem;
+  }
+
+  .home-project-link-row span,
+  .home-location-old,
+  .home-location-current,
+  .home-footer .footer-link,
+  .home-linkedin {
+    font-size: 1.5rem;
+  }
+
+  .home-linkedin {
+    width: 3.6rem;
+  }
+
+  .home-footer {
+    padding: 3rem 0 2.5rem;
   }
 }
