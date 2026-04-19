@@ -498,6 +498,16 @@ h3 {
   color: var(--home-pink);
 }
 
+.home-hero h1 .hero-line-one {
+  display: inline-block;
+  white-space: nowrap;
+  color: var(--ink-dark);
+}
+
+.home-hero h1 .hero-line-one span {
+  color: var(--home-pink);
+}
+
 .home-work {
   padding: 0;
 }
