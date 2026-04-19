@@ -424,14 +424,14 @@ h3 {
 .home-brand {
   display: grid;
   place-items: center;
-  width: 4rem;
+  width: 4.8rem;
   aspect-ratio: 1;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 2.4rem;
-  letter-spacing: 0.03em;
-  border: 3px solid #111;
-  border-radius: 1.2rem 1.2rem 2rem 2rem;
-  color: #111;
+}
+
+.home-brand img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .home-header .site-nav {
