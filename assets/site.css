@@ -459,7 +459,7 @@ h3 {
 }
 
 .home-hero-copy {
-  max-width: 62rem;
+  max-width: 74rem;
   padding-left: clamp(2rem, 6vw, 6.5rem);
 }
 
@@ -482,7 +482,7 @@ h3 {
 }
 
 .home-hero h1 {
-  max-width: 12ch;
+  max-width: 14ch;
   font-size: clamp(3.6rem, 7vw, 6.6rem);
   line-height: 0.96;
   text-transform: uppercase;
