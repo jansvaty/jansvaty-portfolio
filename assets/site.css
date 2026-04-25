@@ -458,7 +458,7 @@ h3 {
 
 .home-hero {
   width: min(1680px, calc(100% - 4rem));
-  min-height: 30rem;
+  min-height: 24rem;
   margin: 3.2rem auto 0;
   display: grid;
   align-items: center;
@@ -791,7 +791,7 @@ h3 {
   }
 
   .home-hero {
-    min-height: 22rem;
+    min-height: 18rem;
     margin-top: 1.5rem;
   }
 
