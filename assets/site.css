@@ -522,7 +522,7 @@ h3 {
 }
 
 .home-section-heading {
-  width: min(1680px, calc(100% - 4rem));
+  width: min(1320px, calc(100% - 8rem));
   margin: 0 auto;
   padding-top: 2rem;
 }
@@ -535,7 +535,7 @@ h3 {
 }
 
 .home-project-list {
-  width: min(1680px, calc(100% - 4rem));
+  width: min(1320px, calc(100% - 8rem));
   margin: 0 auto;
   display: grid;
   gap: 3.5rem;
@@ -543,7 +543,7 @@ h3 {
 
 .home-project-title {
   margin: 0 0 1rem;
-  font-size: clamp(2rem, 3vw, 3.1rem);
+  font-size: clamp(1.75rem, 2.4vw, 2.5rem);
   line-height: 0.98;
   text-transform: uppercase;
   color: #fff;
@@ -552,11 +552,11 @@ h3 {
 .home-project-panel {
   display: grid;
   grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.48fr);
-  gap: clamp(1.5rem, 4vw, 4rem);
+  gap: clamp(1.25rem, 2.5vw, 2.75rem);
   align-items: center;
-  padding: clamp(1.5rem, 3vw, 3rem);
-  border: 8px solid var(--home-outline);
-  border-radius: 3rem;
+  padding: clamp(1.1rem, 2vw, 1.85rem);
+  border: 6px solid var(--home-outline);
+  border-radius: 2.4rem;
 }
 
 .home-project-sharesies .home-project-panel {
@@ -576,7 +576,7 @@ h3 {
 }
 
 .home-project-panel-customs {
-  grid-template-columns: minmax(220px, 0.68fr) minmax(0, 1.52fr);
+  grid-template-columns: minmax(220px, 0.78fr) minmax(360px, 0.92fr);
 }
 
 .home-project-media {
@@ -586,14 +586,14 @@ h3 {
 
 .home-project-media img {
   width: 100%;
-  max-width: 22rem;
-  max-height: 27rem;
+  max-width: 18rem;
+  max-height: 21rem;
   object-fit: contain;
 }
 
 .home-project-content {
   display: grid;
-  gap: 2rem;
+  gap: 1.4rem;
   align-content: center;
   width: 100%;
 }
@@ -601,8 +601,8 @@ h3 {
 .home-project-content p {
   max-width: none;
   font-family: "Nunito", sans-serif;
-  font-size: clamp(1.35rem, 2.2vw, 2.1rem);
-  line-height: 1.45;
+  font-size: clamp(1.05rem, 1.45vw, 1.45rem);
+  line-height: 1.4;
   color: #fff;
   font-weight: 700;
 }
@@ -613,22 +613,24 @@ h3 {
 
 .home-project-content-split {
   min-height: 100%;
+  width: min(100%, 44rem);
+  justify-self: end;
 }
 
 .home-project-links {
   display: grid;
-  gap: 4.5rem;
+  gap: 2.75rem;
 }
 
 .home-project-link-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(14rem, 20rem) auto;
   align-items: center;
   gap: 1.5rem;
 }
 
 .home-project-link-row span {
-  font-size: clamp(2.2rem, 4vw, 4rem);
+  font-size: clamp(1.75rem, 2.8vw, 2.8rem);
   line-height: 0.95;
   text-transform: uppercase;
   color: #fff;
@@ -636,7 +638,8 @@ h3 {
 
 .home-footer {
   margin-top: 0;
-  padding: 5rem 0 4rem;
+  width: 100%;
+  padding: 5rem max(4rem, calc((100vw - 1320px) / 2)) 4rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
@@ -771,9 +774,8 @@ h3 {
   .home-header,
   .home-hero,
   .home-section-heading,
-  .home-project-list,
-  .home-footer {
-    width: min(100% - 1.5rem, 1680px);
+  .home-project-list {
+    width: min(100% - 1.5rem, 1320px);
   }
 
   .home-header {
@@ -847,6 +849,6 @@ h3 {
   }
 
   .home-footer {
-    padding: 3rem 0 2.5rem;
+    padding: 3rem 1.5rem 2.5rem;
   }
 }
