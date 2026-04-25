@@ -611,6 +611,11 @@ h3 {
   justify-self: end;
 }
 
+.home-project-sharesies .home-project-content .button-dark,
+.home-project-stake .home-project-content .button-dark {
+  margin-top: 0.6rem;
+}
+
 .home-project-content-split {
   min-height: 100%;
   width: min(100%, 44rem);
