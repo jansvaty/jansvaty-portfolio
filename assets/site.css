@@ -448,12 +448,22 @@ h3 {
   color: #d9577b;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+  transition: transform 180ms ease, color 180ms ease, background-color 180ms ease;
 }
 
 .home-header .site-nav a.button-outline {
   color: var(--home-link);
   letter-spacing: 0;
   text-transform: none;
+}
+
+.home-header .site-nav a:not(.button-outline):hover {
+  transform: scale(1.06);
+}
+
+.home-header .site-nav a.button-outline:hover {
+  background: var(--home-link);
+  color: #fff;
 }
 
 .home-hero {
