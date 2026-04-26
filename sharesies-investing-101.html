@@ -6,94 +6,120 @@
   <title>Investing 101 | Jan Svaty</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/site.css">
   <script src="assets/site.js" defer></script>
 </head>
-<body>
-  <div class="site-shell">
-    <header class="site-header">
-      <a class="brand" href="index.html">Jan Svaty</a>
+<body class="sharesies-page">
+  <div class="site-shell sharesies-shell">
+    <header class="site-header home-header sharesies-header">
+      <a class="brand home-brand" href="index.html" aria-label="Jan Svaty home">
+        <img src="assets/images/logo-mark.png" alt="Jan Svaty logo">
+      </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" class="site-nav">
-        <a href="index.html">Work</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="about.html">Learn about me</a>
+        <a href="https://www.linkedin.com/in/jansvaty/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="button button-outline" href="contact.html">Contact me</a>
       </nav>
     </header>
 
     <main>
-      <section class="project-hero reveal">
-        <div>
-          <p class="eyebrow">Sharesies • 2022</p>
+      <section class="sharesies-hero reveal">
+        <div class="sharesies-hero-visual">
           <h1>Investing 101</h1>
-          <p class="lede">A research-led concept to help prospective investors understand the basics, reduce anxiety, and start their investing journey with more confidence.</p>
-          <div class="meta-row">
-            <span>Client: Sharesies</span>
-            <span>Deliverables: Hi-fi prototype, final report</span>
-            <span>Role: UX/UI design, project coordination</span>
+          <img src="assets/images/investing-hero.png" alt="Investing 101 case study illustration">
+        </div>
+
+        <div class="sharesies-hero-copy">
+          <p class="sharesies-summary">Sharesies is a stock market investing platform with a mission to make wealth development accessible to all. While investing offers a powerful path to financial empowerment, significant barriers still prevent many potential investors from getting started.</p>
+
+          <div class="sharesies-meta" aria-label="Project details">
+            <div>
+              <p class="sharesies-meta-label">Year</p>
+              <p class="sharesies-meta-value">2022</p>
+            </div>
+            <div>
+              <p class="sharesies-meta-label">Client</p>
+              <p class="sharesies-meta-value">Sharesies</p>
+            </div>
+            <div>
+              <p class="sharesies-meta-label">Deliverables</p>
+              <p class="sharesies-meta-value">Hi-fi prototype, final report</p>
+            </div>
+            <div>
+              <p class="sharesies-meta-label">My role</p>
+              <p class="sharesies-meta-value">UX/UI Design, Project coordinator</p>
+            </div>
           </div>
         </div>
-        <img src="assets/images/investing-hero.png" alt="Investing 101 case study illustration">
       </section>
 
-      <section class="section reveal">
-        <div class="section-heading">
-          <p class="eyebrow">The brief</p>
-          <h2>Why many potential investors never begin.</h2>
-        </div>
-        <div class="prose-block">
-          <p>Sharesies makes stock market investing more accessible, but the team wanted to better understand the barriers stopping new users from taking the first step. Our three-person team was asked to identify those barriers and explore how they differed across users.</p>
-          <p>The goal was to move from problem framing to a concept that could support first-time investors with clearer education, reduced friction, and stronger confidence.</p>
-        </div>
-      </section>
+      <div class="sharesies-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 220" preserveAspectRatio="none" role="presentation">
+          <path d="M0,120 C220,170 520,35 800,95 C1060,150 1210,235 1440,165 L1440,220 L0,220 Z"></path>
+        </svg>
+      </div>
 
-      <section class="section reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Discovery</p>
-          <h2>Desk research, interviews, and synthesis.</h2>
-        </div>
-        <div class="detail-grid">
-          <article class="detail-card">
-            <h3>Research scope</h3>
-            <p>We studied how people in New Zealand and elsewhere approach investing, then focused interviews on non-Sharesies users, including people who never joined and people who had stopped using the product.</p>
-          </article>
-          <article class="detail-card">
-            <h3>What emerged</h3>
-            <p>We mapped 32 findings into eight key insights. A strong pattern was that investing felt intimidating, overly complex, and culturally distant from many potential users.</p>
-          </article>
-          <article class="detail-card">
-            <h3>Problem framing</h3>
-            <p>We used the research to define a clear “how might we” direction around helping people overcome uncertainty and build enough understanding to start.</p>
-          </article>
-        </div>
-      </section>
+      <div class="sharesies-story">
+        <section class="section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">The brief</p>
+            <h2>Why many potential investors never begin.</h2>
+          </div>
+          <div class="prose-block">
+            <p>Sharesies makes stock market investing more accessible, but the team wanted to better understand the barriers stopping new users from taking the first step. Our three-person team was asked to identify those barriers and explore how they differed across users.</p>
+            <p>The goal was to move from problem framing to a concept that could support first-time investors with clearer education, reduced friction, and stronger confidence.</p>
+          </div>
+        </section>
 
-      <section class="section reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Development</p>
-          <h2>From workshops to an educational hub.</h2>
-        </div>
-        <div class="prose-block">
-          <p>After a workshop with Sharesies, we narrowed our focus and tested a few concept directions. We briefly explored embedding learning into sign-up, but research pointed us toward a better opportunity: improve the educational journey itself rather than adding more friction to onboarding.</p>
-          <p>We reviewed competitor learning sites and found a consistent pattern: strong investing education combines step-by-step content, engaging visuals, interactive tools, and simple explanations.</p>
-          <p>That led to two low-fidelity concepts, followed by quick testing with inexperienced investors and then a high-fidelity concept built around structured learning, illustrations, quizzes, and practical written content.</p>
-        </div>
-      </section>
+        <section class="section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Discovery</p>
+            <h2>Desk research, interviews, and synthesis.</h2>
+          </div>
+          <div class="detail-grid">
+            <article class="detail-card">
+              <h3>Research scope</h3>
+              <p>We studied how people in New Zealand and elsewhere approach investing, then focused interviews on non-Sharesies users, including people who never joined and people who had stopped using the product.</p>
+            </article>
+            <article class="detail-card">
+              <h3>What emerged</h3>
+              <p>We mapped 32 findings into eight key insights. A strong pattern was that investing felt intimidating, overly complex, and culturally distant from many potential users.</p>
+            </article>
+            <article class="detail-card">
+              <h3>Problem framing</h3>
+              <p>We used the research to define a clear how-might-we direction around helping people overcome uncertainty and build enough understanding to start.</p>
+            </article>
+          </div>
+        </section>
 
-      <section class="section reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Outcome</p>
-          <h2>A mini course for investing basics.</h2>
-        </div>
-        <div class="prose-block">
-          <p>The final concept was an “Investing Basics Mini Course” inside the Sharesies learning experience. It gave learners a guided path through the basics with short explanations, interactive elements, and clear language tied directly to user needs identified during research.</p>
-          <p>The project reinforced a few core lessons for me: strong team communication matters, every design decision needs a clear reason, and adaptability is essential when the problem space shifts.</p>
-        </div>
-      </section>
+        <section class="section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Development</p>
+            <h2>From workshops to an educational hub.</h2>
+          </div>
+          <div class="prose-block">
+            <p>After a workshop with Sharesies, we narrowed our focus and tested a few concept directions. We briefly explored embedding learning into sign-up, but research pointed us toward a better opportunity: improve the educational journey itself rather than adding more friction to onboarding.</p>
+            <p>We reviewed competitor learning sites and found a consistent pattern: strong investing education combines step-by-step content, engaging visuals, interactive tools, and simple explanations.</p>
+            <p>That led to two low-fidelity concepts, followed by quick testing with inexperienced investors and then a high-fidelity concept built around structured learning, illustrations, quizzes, and practical written content.</p>
+          </div>
+        </section>
+
+        <section class="section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Outcome</p>
+            <h2>A mini course for investing basics.</h2>
+          </div>
+          <div class="prose-block">
+            <p>The final concept was an Investing Basics Mini Course inside the Sharesies learning experience. It gave learners a guided path through the basics with short explanations, interactive elements, and clear language tied directly to user needs identified during research.</p>
+            <p>The project reinforced a few core lessons for me: strong team communication matters, every design decision needs a clear reason, and adaptability is essential when the problem space shifts.</p>
+          </div>
+        </section>
+      </div>
     </main>
 
-    <footer class="site-footer reveal">
+    <footer class="site-footer reveal sharesies-footer">
       <div>
         <p class="eyebrow">Next project</p>
         <a class="footer-link" href="impact-investing-network.html">Impact Investing Network redesign</a>
