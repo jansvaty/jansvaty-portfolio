@@ -416,10 +416,13 @@ h3 {
 
 .home-header {
   position: sticky;
-  top: 1rem;
+  top: 0;
   z-index: 20;
-  padding: 1rem 0 0;
+  width: 100%;
+  margin-inline: 0;
+  padding: 1rem max(2rem, calc((100vw - 1680px) / 2)) 0;
   margin-bottom: 0;
+  border-radius: 0;
 }
 
 .home-brand {
@@ -724,8 +727,8 @@ body.sharesies-page {
 }
 
 .sharesies-header {
-  width: min(1480px, calc(100% - 5rem));
-  margin-inline: auto;
+  width: 100%;
+  margin-inline: 0;
 }
 
 .sharesies-hero {
@@ -937,7 +940,6 @@ body.sharesies-page {
     flex-direction: column;
   }
 
-  .home-header,
   .home-hero,
   .home-section-heading,
   .home-project-list {
@@ -945,6 +947,7 @@ body.sharesies-page {
   }
 
   .home-header {
+    padding-inline: 1.5rem;
     padding-top: 0.8rem;
   }
 
@@ -1018,9 +1021,12 @@ body.sharesies-page {
     padding: 3rem 1.5rem 2.5rem;
   }
 
-  .sharesies-header,
   .sharesies-hero {
     width: min(100% - 1.5rem, 1680px);
+  }
+
+  .sharesies-header {
+    width: 100%;
   }
 
   .sharesies-hero {
