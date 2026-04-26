@@ -408,7 +408,7 @@ h3 {
 .home-footer {
   width: min(1680px, calc(100% - 4rem));
   margin-inline: auto;
-  background: transparent;
+  background: #fff;
   border: 0;
   box-shadow: none;
   backdrop-filter: none;
@@ -724,29 +724,29 @@ body.sharesies-page {
 }
 
 .sharesies-header {
-  width: min(1680px, calc(100% - 4rem));
+  width: min(1480px, calc(100% - 5rem));
   margin-inline: auto;
 }
 
 .sharesies-hero {
-  width: min(1680px, calc(100% - 4rem));
-  margin: 2.75rem auto 0;
-  padding: 7rem 0 4rem;
+  width: min(1480px, calc(100% - 5rem));
+  margin: 2rem auto 0;
+  padding: 5rem 0 3rem;
   display: grid;
-  grid-template-columns: minmax(320px, 0.9fr) minmax(520px, 1.3fr);
-  gap: clamp(3rem, 6vw, 8rem);
+  grid-template-columns: minmax(280px, 0.78fr) minmax(420px, 1fr);
+  gap: clamp(2.5rem, 4vw, 5rem);
   align-items: center;
 }
 
 .sharesies-hero-visual {
   display: grid;
   justify-items: center;
-  gap: 2rem;
+  gap: 1.35rem;
 }
 
 .sharesies-hero h1 {
   font-family: "Bebas Neue", sans-serif;
-  font-size: clamp(5rem, 8vw, 8rem);
+  font-size: clamp(3.8rem, 5.8vw, 6rem);
   letter-spacing: 0.02em;
   line-height: 0.92;
   text-transform: uppercase;
@@ -754,19 +754,20 @@ body.sharesies-page {
 }
 
 .sharesies-hero-visual img {
-  width: min(100%, 30rem);
+  width: min(100%, 23rem);
   height: auto;
 }
 
 .sharesies-hero-copy {
   display: grid;
-  gap: clamp(2rem, 4vw, 4.5rem);
+  gap: clamp(1.6rem, 3vw, 3rem);
+  max-width: 52rem;
 }
 
 .sharesies-summary {
   font-family: "Nunito", sans-serif;
-  font-size: clamp(2rem, 3.15vw, 3.6rem);
-  line-height: 1.42;
+  font-size: clamp(1.45rem, 2.15vw, 2.45rem);
+  line-height: 1.5;
   font-weight: 800;
   color: var(--home-pink);
 }
@@ -774,7 +775,7 @@ body.sharesies-page {
 .sharesies-meta {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 2rem;
+  gap: 1.4rem;
 }
 
 .sharesies-meta-label,
@@ -785,13 +786,13 @@ body.sharesies-page {
 
 .sharesies-meta-label {
   margin-bottom: 0.65rem;
-  font-size: clamp(1.05rem, 1.4vw, 1.55rem);
+  font-size: clamp(0.95rem, 1.05vw, 1.15rem);
   font-weight: 800;
 }
 
 .sharesies-meta-value {
-  font-size: clamp(0.95rem, 1.25vw, 1.45rem);
-  line-height: 1.5;
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
+  line-height: 1.4;
 }
 
 .sharesies-divider {
