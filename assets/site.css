@@ -732,22 +732,23 @@ body.sharesies-page {
 .sharesies-hero {
   width: min(1480px, calc(100% - clamp(1.5rem, 4vw, 5rem)));
   margin: 2rem auto 0;
-  padding: clamp(2.5rem, 7vw, 5rem) 0 3rem;
+  padding: clamp(3rem, 6vw, 4.75rem) 0 3rem;
   display: grid;
-  grid-template-columns: minmax(14rem, 0.64fr) minmax(24rem, 1fr);
-  gap: clamp(1.75rem, 3.2vw, 3.8rem);
-  align-items: center;
+  grid-template-columns: minmax(12rem, 0.56fr) minmax(26rem, 1fr);
+  gap: clamp(2.5rem, 4.2vw, 5rem);
+  align-items: start;
 }
 
 .sharesies-hero-visual {
   display: grid;
   justify-items: center;
-  gap: clamp(1rem, 2vw, 1.75rem);
+  gap: 1rem;
+  padding-top: 0.6rem;
 }
 
 .sharesies-hero h1 {
   font-family: "Bebas Neue", sans-serif;
-  font-size: clamp(3rem, 4.8vw, 5rem);
+  font-size: clamp(2.5rem, 3.9vw, 4rem);
   letter-spacing: 0.02em;
   line-height: 0.92;
   text-transform: uppercase;
@@ -756,7 +757,7 @@ body.sharesies-page {
 }
 
 .sharesies-hero-visual img {
-  width: clamp(11rem, 15vw, 17rem);
+  width: clamp(8.75rem, 11vw, 12.5rem);
   max-width: 100%;
   height: auto;
 }
@@ -765,6 +766,7 @@ body.sharesies-page {
   display: grid;
   gap: clamp(1.6rem, 3vw, 3rem);
   max-width: 52rem;
+  padding-top: 0.35rem;
 }
 
 .sharesies-summary {
@@ -1038,11 +1040,11 @@ body.sharesies-page {
   }
 
   .sharesies-hero h1 {
-    font-size: clamp(2.8rem, 16vw, 4.2rem);
+    font-size: clamp(2.6rem, 16vw, 3.8rem);
   }
 
   .sharesies-hero-visual img {
-    width: min(100%, 15rem);
+    width: min(100%, 12rem);
   }
 
   .sharesies-summary {
