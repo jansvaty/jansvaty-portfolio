@@ -6,88 +6,114 @@
   <title>Stake Design System | Jan Svaty</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/site.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css?v=20260507-1">
   <script src="assets/site.js" defer></script>
 </head>
-<body>
-  <div class="site-shell">
-    <header class="site-header">
-      <a class="brand" href="index.html">Jan Svaty</a>
+<body class="sharesies-page">
+  <div class="site-shell sharesies-shell">
+    <header class="site-header home-header sharesies-header">
+      <a class="brand home-brand" href="index.html" aria-label="Jan Svaty home">
+        <img src="assets/images/logo-mark.png" alt="Jan Svaty logo">
+      </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" class="site-nav">
-        <a href="index.html">Work</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="about.html">Learn about me</a>
+        <a href="https://www.linkedin.com/in/jansvaty/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="button button-outline" href="contact.html">Contact me</a>
       </nav>
     </header>
 
     <main>
-      <section class="project-hero reveal">
-        <div>
-          <p class="eyebrow">Stake • 2022</p>
+      <section class="sharesies-hero reveal">
+        <div class="sharesies-hero-visual">
           <h1>Design System</h1>
-          <p class="lede">A reusable UI system for a fast-growing investing platform, designed to improve consistency, communication, and speed across product work.</p>
-          <div class="meta-row">
-            <span>Client: Stake</span>
-            <span>Length: 3 weeks</span>
-            <span>Role: UX/UI design</span>
+          <img src="assets/images/stake-hero.png" alt="Stake design system preview">
+        </div>
+
+        <div class="sharesies-hero-copy">
+          <p class="sharesies-summary">A reusable UI system for a fast-growing investing platform, designed to improve consistency, communication, and speed across product work.</p>
+
+          <div class="sharesies-meta" aria-label="Project details">
+            <div class="sharesies-meta-item">
+              <p class="sharesies-meta-label">Year</p>
+              <p class="sharesies-meta-value">2022</p>
+            </div>
+            <div class="sharesies-meta-item">
+              <p class="sharesies-meta-label">Client</p>
+              <p class="sharesies-meta-value">Stake</p>
+            </div>
+            <div class="sharesies-meta-item sharesies-meta-item-deliverables">
+              <p class="sharesies-meta-label">Deliverables</p>
+              <p class="sharesies-meta-value">Design system, style guide</p>
+            </div>
+            <div class="sharesies-meta-item sharesies-meta-item-role">
+              <p class="sharesies-meta-label">My role</p>
+              <p class="sharesies-meta-value">UX/UI design</p>
+            </div>
           </div>
         </div>
-        <img src="assets/images/stake-hero.png" alt="Stake design system preview">
       </section>
 
-      <section class="section reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Context</p>
-          <h2>Scaling product consistency for 750,000 users.</h2>
-        </div>
-        <div class="prose-block">
-          <p>Stake was evolving quickly across its web platform, mobile app, and marketing surfaces. That pace created pressure: new features were rolling out, internal and external communication needed structure, and designers and developers needed a clearer shared framework.</p>
-          <p>The task was to define a design system that covered style guidance, UI components, typography, color, iconography, photography, and a set of principles that could support future product growth.</p>
-        </div>
-      </section>
+      <div class="sharesies-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 220" preserveAspectRatio="none" role="presentation">
+          <path d="M0,120 C220,170 520,35 800,95 C1060,150 1210,235 1440,165 L1440,220 L0,220 Z"></path>
+        </svg>
+      </div>
 
-      <section class="section reveal">
-        <div class="detail-grid">
-          <article class="detail-card">
-            <h3>Principles</h3>
-            <p>The system centered on transparency, cleanliness, and simplicity: minimal UI, clear signals, and consistent hierarchy in an environment where financial data must be understood quickly.</p>
-          </article>
-          <article class="detail-card">
-            <h3>Foundations</h3>
-            <p>I documented color behavior, type usage, iconography, spacing, and component rules so product patterns could be reused instead of re-invented.</p>
-          </article>
-          <article class="detail-card">
-            <h3>Outcome</h3>
-            <p>The work gave Stake a stronger internal reference point for design and development decisions, reducing ambiguity and improving consistency across digital assets.</p>
-          </article>
-        </div>
-      </section>
+      <div class="sharesies-story">
+        <section class="section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Context</p>
+            <h2>Scaling product consistency for 750,000 users.</h2>
+          </div>
+          <div class="prose-block">
+            <p>Stake was evolving quickly across its web platform, mobile app, and marketing surfaces. That pace created pressure: new features were rolling out, internal and external communication needed structure, and designers and developers needed a clearer shared framework.</p>
+            <p>The task was to define a design system that covered style guidance, UI components, typography, color, iconography, photography, and a set of principles that could support future product growth.</p>
+          </div>
+        </section>
 
-      <section class="section reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Method</p>
-          <h2>Audit first, system second.</h2>
-        </div>
-        <div class="prose-block">
-          <p>Because Stake already had public product surfaces, I used browser inspection and comparative review of public design systems to identify patterns worth formalising. The work was part reconstruction, part codification, and part forward-looking framework design.</p>
-          <p>A large part of the value came from turning existing interface decisions into something documented, repeatable, and easier for teams to use consistently.</p>
-        </div>
-      </section>
+        <section class="section reveal">
+          <div class="detail-grid">
+            <article class="detail-card">
+              <h3>Principles</h3>
+              <p>The system centered on transparency, cleanliness, and simplicity: minimal UI, clear signals, and consistent hierarchy in an environment where financial data must be understood quickly.</p>
+            </article>
+            <article class="detail-card">
+              <h3>Foundations</h3>
+              <p>I documented color behavior, type usage, iconography, spacing, and component rules so product patterns could be reused instead of re-invented.</p>
+            </article>
+            <article class="detail-card">
+              <h3>Outcome</h3>
+              <p>The work gave Stake a stronger internal reference point for design and development decisions, reducing ambiguity and improving consistency across digital assets.</p>
+            </article>
+          </div>
+        </section>
 
-      <section class="section reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Takeaway</p>
-          <h2>Design systems reduce noise.</h2>
-        </div>
-        <div class="prose-block">
-          <p>For a trading product, clarity is not a visual preference. It is functional. Strong systems make high-stakes interfaces easier to build and easier to trust.</p>
-        </div>
-      </section>
+        <section class="section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Method</p>
+            <h2>Audit first, system second.</h2>
+          </div>
+          <div class="prose-block">
+            <p>Because Stake already had public product surfaces, I used browser inspection and comparative review of public design systems to identify patterns worth formalising. The work was part reconstruction, part codification, and part forward-looking framework design.</p>
+            <p>A large part of the value came from turning existing interface decisions into something documented, repeatable, and easier for teams to use consistently.</p>
+          </div>
+        </section>
+
+        <section class="section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Takeaway</p>
+            <h2>Design systems reduce noise.</h2>
+          </div>
+          <div class="prose-block">
+            <p>For a trading product, clarity is not a visual preference. It is functional. Strong systems make high-stakes interfaces easier to build and easier to trust.</p>
+          </div>
+        </section>
+      </div>
     </main>
 
-    <footer class="site-footer reveal">
+    <footer class="site-footer reveal sharesies-footer">
       <div>
         <p class="eyebrow">Next project</p>
         <a class="footer-link" href="customs-resources.html">New Zealand Customs resources</a>
