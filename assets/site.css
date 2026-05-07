@@ -749,7 +749,7 @@ body.sharesies-page {
 
 .sharesies-hero h1 {
   font-family: "Bebas Neue", sans-serif;
-  font-size: clamp(2.35rem, 3.6vw, 3.7rem);
+  font-size: 3.2rem;
   letter-spacing: 0.02em;
   line-height: 0.92;
   text-transform: uppercase;
@@ -768,28 +768,28 @@ body.sharesies-page {
   display: grid;
   gap: clamp(1.3rem, 2.2vw, 2.2rem);
   width: 100%;
-  max-width: 52rem;
+  max-width: 46rem;
   padding-top: 0.35rem;
 }
 
 .sharesies-summary {
   font-family: "Nunito", sans-serif;
-  font-size: clamp(1.04rem, 1.18vw, 1.34rem);
+  font-size: 1.28rem;
   line-height: 1.42;
   font-weight: 800;
   color: var(--home-pink);
-  width: min(100%, 52rem);
-  max-width: 52rem;
+  width: 46rem;
+  max-width: 100%;
 }
 
 .sharesies-meta {
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: max-content;
-  width: min(100%, 52rem);
-  max-width: 52rem;
-  justify-content: space-between;
-  gap: 1.1rem;
+  grid-template-columns: 4.5rem 8.5rem 14rem 16rem;
+  width: 46rem;
+  max-width: 100%;
+  justify-content: start;
+  column-gap: 1.2rem;
+  row-gap: 0.9rem;
   align-items: start;
 }
 
