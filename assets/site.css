@@ -784,7 +784,9 @@ body.sharesies-page {
 .sharesies-meta {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(0.9rem, 1.8vw, 1.8rem);
+  width: min(100%, 54rem);
+  max-width: 54rem;
+  gap: clamp(0.8rem, 1.4vw, 1.4rem);
   align-items: start;
 }
 
