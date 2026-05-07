@@ -850,6 +850,11 @@ body.sharesies-page {
   color: #fff;
 }
 
+.sharesies-story .section-heading h2 {
+  max-width: none;
+  white-space: nowrap;
+}
+
 .sharesies-story .eyebrow {
   color: #90a9e2;
 }
