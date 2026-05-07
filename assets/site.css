@@ -766,18 +766,18 @@ body.sharesies-page {
   display: grid;
   gap: clamp(1.3rem, 2.2vw, 2.2rem);
   width: 100%;
-  max-width: 56rem;
+  max-width: 62rem;
   padding-top: 0.35rem;
 }
 
 .sharesies-summary {
   font-family: "Nunito", sans-serif;
-  font-size: clamp(1.12rem, 1.58vw, 1.92rem);
-  line-height: 1.42;
+  font-size: clamp(1rem, 1.36vw, 1.62rem);
+  line-height: 1.4;
   font-weight: 800;
   color: var(--home-pink);
-  width: min(100%, 50ch);
-  max-width: 50ch;
+  width: min(100%, 58ch);
+  max-width: 58ch;
 }
 
 .sharesies-meta {
