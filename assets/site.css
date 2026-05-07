@@ -851,6 +851,7 @@ body.sharesies-page {
 }
 
 .sharesies-story .section-heading h2 {
+  width: max-content;
   max-width: none;
   white-space: nowrap;
 }
