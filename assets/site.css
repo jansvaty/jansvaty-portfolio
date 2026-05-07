@@ -841,6 +841,10 @@ body.sharesies-page {
   margin-bottom: 1lh;
 }
 
+.sharesies-story .prose-block {
+  max-width: 48rem;
+}
+
 .sharesies-story .section-heading h2,
 .sharesies-story h3 {
   color: #fff;
