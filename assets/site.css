@@ -782,14 +782,25 @@ body.sharesies-page {
 }
 
 .sharesies-meta {
-  display: grid;
-  grid-template-columns: repeat(4, max-content);
+  display: flex;
+  flex-wrap: wrap;
   width: min(100%, 54rem);
   max-width: 54rem;
-  justify-content: start;
-  column-gap: clamp(1.8rem, 3vw, 3.8rem);
-  row-gap: 0.8rem;
+  justify-content: flex-start;
+  gap: 0.8rem 2.2rem;
   align-items: start;
+}
+
+.sharesies-meta-item {
+  min-width: max-content;
+}
+
+.sharesies-meta-item-deliverables {
+  min-width: 15.5rem;
+}
+
+.sharesies-meta-item-role {
+  min-width: 15.5rem;
 }
 
 .sharesies-meta-label,
