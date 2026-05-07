@@ -765,7 +765,8 @@ body.sharesies-page {
 .sharesies-hero-copy {
   display: grid;
   gap: clamp(1.3rem, 2.2vw, 2.2rem);
-  max-width: 78rem;
+  width: 100%;
+  max-width: none;
   padding-top: 0.35rem;
 }
 
@@ -775,7 +776,7 @@ body.sharesies-page {
   line-height: 1.42;
   font-weight: 800;
   color: var(--home-pink);
-  width: min(100%, 72ch);
+  width: 100%;
   max-width: none;
 }
 
