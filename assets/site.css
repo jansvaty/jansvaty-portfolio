@@ -837,8 +837,8 @@ body.sharesies-page {
   margin: 0 auto;
 }
 
-.sharesies-story .section-heading + .prose-block {
-  margin-top: 1lh;
+.sharesies-story .section-heading {
+  margin-bottom: 1lh;
 }
 
 .sharesies-story .section-heading h2,
