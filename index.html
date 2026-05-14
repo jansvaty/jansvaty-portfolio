@@ -7,8 +7,8 @@
   <meta name="description" content="Portfolio of Jan Svaty, a digital designer based between Prague and New Zealand.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/site.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css?v=20260515-hp1">
   <script src="assets/site.js" defer></script>
 </head>
 <body class="home-page">
@@ -26,103 +26,98 @@
     </header>
 
     <main>
-      <section class="home-hero reveal">
-        <div class="home-hero-copy">
-          <p class="home-intro">👋 I'm Jan Svaty,</p>
-          <h1>A <span class="digital-designer">digital designer</span> from Prague</h1>
+      <section class="hp-hero reveal">
+        <div class="hp-hero-inner">
+          <p class="hp-greeting">👋 I'm Jan Svaty,</p>
+          <h1>A <em>digital designer</em><br>from Prague</h1>
         </div>
       </section>
 
-      <section id="work" class="home-work">
-        <div class="home-divider" aria-hidden="true">
-          <svg viewBox="0 0 1440 220" preserveAspectRatio="none" role="presentation">
-            <path d="M0,120 C200,155 410,205 660,165 C930,120 1130,55 1440,115 L1440,220 L0,220 Z"></path>
-          </svg>
-        </div>
-        <div class="home-work-inner">
-          <div class="section-heading home-section-heading">
-            <p class="eyebrow">Case studies</p>
-          </div>
+      <section id="work" class="hp-work">
+        <p class="hp-work-label">Case studies</p>
 
-          <div class="home-project-list">
-            <article class="home-project home-project-sharesies">
-              <p class="home-project-title">Sharesies: Investing 101</p>
-              <div class="home-project-panel">
-                <div class="home-project-media">
-                  <img src="assets/images/home-sharesies.png" alt="Sharesies project preview">
+        <div class="hp-project-list">
+
+          <article class="hp-project reveal">
+            <div class="hp-project-info">
+              <p class="hp-project-num">01</p>
+              <h2>Sharesies: Investing 101</h2>
+              <p>I led a three-month project for Sharesies focused on discovering and understanding barriers that prospective investors face when starting their investing journey. Our team addressed them by developing an educational hub with targeted resources, a calculation tool and comprehensive training module.</p>
+              <a class="hp-link" href="sharesies-investing-101.html">Open project</a>
+            </div>
+            <div class="hp-project-visual">
+              <img src="assets/images/home-sharesies.png" alt="Sharesies project preview">
+            </div>
+          </article>
+
+          <hr class="hp-divider">
+
+          <article class="hp-project reveal">
+            <div class="hp-project-info">
+              <p class="hp-project-num">02</p>
+              <h2>Stake: Design System</h2>
+              <p>For this project, I developed a design system for Hello Stake Investing Broker. The aim was to help Stake streamline their internal and external communication during the development process and give their digital assets a structure.</p>
+              <a class="hp-link" href="stake-design-system.html">Open project</a>
+            </div>
+            <div class="hp-project-visual">
+              <img src="assets/images/home-stake.png" alt="Stake design system preview">
+            </div>
+          </article>
+
+          <hr class="hp-divider">
+
+          <article class="hp-project reveal">
+            <div class="hp-project-info">
+              <p class="hp-project-num">03</p>
+              <h2>Impact Investing Network: Web redesign</h2>
+              <p>For the Impact Investing Network (IIN), New Zealand's only non-profit organization of its kind, our team redesigned their web interface to better support their mission of contributing to a sustainable, equitable, and prosperous Aotearoa through investment education.</p>
+              <a class="hp-link" href="impact-investing-network.html">Open project</a>
+            </div>
+            <div class="hp-project-visual">
+              <img src="assets/images/home-impact.png" alt="Impact Investing Network project preview">
+            </div>
+          </article>
+
+          <hr class="hp-divider">
+
+          <article class="hp-project reveal">
+            <div class="hp-project-info">
+              <p class="hp-project-num">04</p>
+              <h2>New Zealand Customs Service: Unclassified Projects</h2>
+              <div class="hp-customs-links">
+                <div class="hp-customs-row">
+                  <span>Welcome to Customs</span>
+                  <a class="hp-link" href="customs-resources.html">Open project</a>
                 </div>
-                <div class="home-project-content">
-                  <p>I led a three-month project for Sharesies focused on discovering and understanding barriers that prospective investors face when starting their investing journey. Our team addressed them by developing an educational hub with targeted resources, a calculation tool and comprehensive training module.</p>
-                  <a class="button button-dark" href="sharesies-investing-101.html">Open project</a>
+                <div class="hp-customs-row">
+                  <span>Resources</span>
+                  <a class="hp-link" href="customs-resources.html">Open project</a>
                 </div>
               </div>
-            </article>
+            </div>
+            <div class="hp-project-visual">
+              <img src="assets/images/home-customs.png" alt="New Zealand Customs project preview">
+            </div>
+          </article>
 
-            <article class="home-project home-project-stake">
-              <p class="home-project-title">Stake: Design System</p>
-              <div class="home-project-panel">
-                <div class="home-project-media">
-                  <img src="assets/images/home-stake.png" alt="Stake design system preview">
-                </div>
-                <div class="home-project-content">
-                  <p>For this project, I developed a design system for Hello Stake Investing Broker. The aim was to help Stake streamline their internal and external communication during the development process and give their digital assets a structure.</p>
-                  <a class="button button-dark" href="stake-design-system.html">Open project</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="home-project home-project-impact">
-              <p class="home-project-title">Impact Investing Network: Web redesign</p>
-              <div class="home-project-panel">
-                <div class="home-project-media">
-                  <img src="assets/images/home-impact.png" alt="Impact Investing Network project preview">
-                </div>
-                <div class="home-project-content">
-                  <p>For the Impact Investing Network (IIN), New Zealand's only non-profit organization of its kind, our team redesigned their web interface to better support their mission of contributing to a sustainable, equitable, and prosperous Aotearoa through investment education.</p>
-                  <a class="button button-dark" href="impact-investing-network.html">Open project</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="home-project home-project-customs">
-              <p class="home-project-title">New Zealand Customs Service: Unclassified Projects</p>
-              <div class="home-project-panel home-project-panel-customs">
-                <div class="home-project-media">
-                  <img src="assets/images/home-customs.png" alt="New Zealand Customs project preview">
-                </div>
-                <div class="home-project-content home-project-content-split">
-                  <div class="home-project-links">
-                    <div class="home-project-link-row">
-                      <span>Welcome to Customs</span>
-                      <a class="button button-dark" href="customs-resources.html">Open project</a>
-                    </div>
-                    <div class="home-project-link-row">
-                      <span>Resources</span>
-                      <a class="button button-dark" href="customs-resources.html">Open project</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer home-footer reveal">
-      <div class="home-footer-block">
-        <p class="eyebrow">Reach out</p>
-        <a class="home-linkedin" href="https://www.linkedin.com/in/jansvaty/" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
+    <footer class="site-footer hp-footer reveal">
+      <div class="hp-footer-block">
+        <p class="hp-footer-label">Reach out</p>
+        <a class="hp-footer-linkedin" href="https://www.linkedin.com/in/jansvaty/" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
       </div>
-      <div class="home-footer-block">
-        <p class="eyebrow">Location</p>
-        <p class="home-location-old">Prague, Vancouver, Calgary, Auckland</p>
-        <p class="home-location-current">Wellington &amp; remote</p>
+      <div class="hp-footer-block">
+        <p class="hp-footer-label">Location</p>
+        <p class="hp-location-old">Prague, Vancouver, Calgary, Auckland</p>
+        <p class="hp-location-current">Wellington &amp; remote</p>
       </div>
-      <div class="home-footer-block">
-        <p class="eyebrow">Contact</p>
-        <a class="footer-link" href="mailto:jan.svaty@gmail.com">jan.svaty@gmail.com</a>
-        <a class="footer-link" href="tel:+64223579093">+64 22-357-9093</a>
+      <div class="hp-footer-block">
+        <p class="hp-footer-label">Contact</p>
+        <a class="hp-footer-link" href="mailto:jan.svaty@gmail.com">jan.svaty@gmail.com</a>
+        <a class="hp-footer-link" href="tel:+64223579093">+64 22-357-9093</a>
       </div>
     </footer>
   </div>
