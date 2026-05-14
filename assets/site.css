@@ -1650,6 +1650,11 @@ body.home-page .hp-project h2 {
   border-radius: 1.5rem;
   padding: 2rem;
   min-height: 22rem;
+  transition: background 200ms ease;
+}
+
+.hp-project-visual:hover {
+  background: #eee;
 }
 
 .hp-project-visual img {
@@ -1658,6 +1663,11 @@ body.home-page .hp-project h2 {
   max-width: 100%;
   object-fit: contain;
   display: block;
+  transition: transform 250ms ease;
+}
+
+.hp-project-visual:hover img {
+  transform: scale(1.03);
 }
 
 .hp-divider {
