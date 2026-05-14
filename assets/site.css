@@ -1303,6 +1303,11 @@ body.cs-editorial .button-outline:hover {
   align-content: start;
 }
 
+.cs-section > .cs-eyebrow {
+  display: block;
+  margin-bottom: 1rem;
+}
+
 .cs-section-split {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
