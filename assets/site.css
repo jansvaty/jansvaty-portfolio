@@ -1232,6 +1232,7 @@ body.cs-editorial .button-outline:hover {
 .cs-title em {
   font-style: italic;
   color: #D4537E;
+  white-space: nowrap;
 }
 
 .cs-meta {
