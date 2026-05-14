@@ -1088,3 +1088,312 @@ body.sharesies-page {
     width: min(100% - 1.5rem, 1180px);
   }
 }
+
+/* ─── Editorial case study layout ─────────────────────────── */
+
+body.cs-editorial {
+  background: #fff;
+  color: #1c1c1c;
+  font-family: "DM Sans", sans-serif;
+}
+
+body.cs-editorial p {
+  font-family: "DM Sans", sans-serif;
+  color: #555;
+  line-height: 1.75;
+}
+
+body.cs-editorial h1,
+body.cs-editorial h2,
+body.cs-editorial h3 {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+body.cs-editorial h1 {
+  font-size: clamp(3.4rem, 7vw, 5.5rem);
+  max-width: 10ch;
+  color: #1c1c1c;
+}
+
+body.cs-editorial h2 {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  max-width: 24ch;
+  color: #1c1c1c;
+  white-space: normal;
+}
+
+body.cs-editorial h3 {
+  font-size: 1.15rem;
+  color: #1c1c1c;
+}
+
+.cs-shell {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+
+body.cs-editorial .site-header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  border-radius: 0;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: none;
+  backdrop-filter: blur(14px);
+  padding: 1.1rem max(2rem, calc((100vw - 1200px) / 2 + 2rem));
+  margin-bottom: 0;
+}
+
+body.cs-editorial .brand img {
+  width: 3.25rem;
+}
+
+body.cs-editorial .site-nav a:not(.button-outline) {
+  color: #555;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+body.cs-editorial .site-nav a:not(.button-outline):hover {
+  color: #D4537E;
+}
+
+body.cs-editorial .button-outline {
+  border-color: #D4537E;
+  color: #D4537E;
+  min-height: 2.75rem;
+  padding-inline: 1.4rem;
+  font-size: 0.88rem;
+}
+
+body.cs-editorial .button-outline:hover {
+  background: #D4537E;
+  color: #fff;
+}
+
+.cs-eyebrow {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #D4537E;
+  margin: 0;
+}
+
+/* Hero */
+.cs-hero {
+  width: min(1200px, calc(100% - 4rem));
+  margin: 4rem auto 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.cs-hero-text {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.cs-lead {
+  font-size: 1.1rem;
+  line-height: 1.72;
+  color: #555;
+  max-width: 46ch;
+  margin: 0;
+}
+
+.cs-meta {
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  display: grid;
+  gap: 0.7rem;
+}
+
+.cs-meta-row {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.cs-meta-label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #bbb;
+  margin: 0;
+}
+
+.cs-meta-value {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.88rem;
+  color: #444;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.cs-hero-image img {
+  width: 100%;
+  border-radius: 1.5rem;
+  display: block;
+}
+
+/* Body content area */
+.cs-body {
+  width: min(1200px, calc(100% - 4rem));
+  margin: 0 auto;
+}
+
+/* Sections */
+.cs-section {
+  padding: 5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.cs-section-head {
+  display: grid;
+  gap: 1rem;
+}
+
+.cs-section-intro {
+  margin-top: 1.25rem;
+  max-width: 58ch;
+}
+
+.cs-prose {
+  display: grid;
+  gap: 1.1rem;
+  max-width: 52ch;
+}
+
+.cs-section-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: start;
+}
+
+/* Cards */
+.cs-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.cs-card {
+  padding: 1.5rem 1.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 0.75rem;
+  display: grid;
+  gap: 0.65rem;
+  background: #fafafa;
+}
+
+.cs-card h3 {
+  font-size: 1.1rem;
+}
+
+.cs-card p {
+  font-size: 0.88rem;
+  line-height: 1.68;
+  color: #666;
+}
+
+/* Image break */
+.cs-image-break {
+  width: min(1200px, calc(100% - 4rem));
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.cs-image-break img {
+  width: 100%;
+  border-radius: 1.25rem;
+  display: block;
+}
+
+/* Footer */
+.cs-footer {
+  width: min(1200px, calc(100% - 4rem));
+  margin: 4rem auto 0;
+  padding: 2rem 0 3rem;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.cs-footer .eyebrow {
+  color: #bbb;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.7rem;
+}
+
+.cs-footer .footer-link {
+  color: #D4537E;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.cs-footer .footer-link:hover {
+  color: #b03562;
+}
+
+@media (max-width: 860px) {
+  .cs-hero,
+  .cs-section-split {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-hero {
+    margin-top: 2.5rem;
+    gap: 2.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  body.cs-editorial h1 {
+    max-width: none;
+  }
+
+  .cs-section {
+    padding: 3.5rem 0;
+  }
+}
+
+@media (max-width: 600px) {
+  body.cs-editorial .site-header {
+    padding: 1rem 1.25rem;
+  }
+
+  .cs-hero,
+  .cs-body,
+  .cs-image-break,
+  .cs-footer {
+    width: calc(100% - 2.5rem);
+  }
+
+  .cs-section {
+    padding: 2.75rem 0;
+  }
+}
