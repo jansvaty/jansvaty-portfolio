@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/site.css?v=20260515-2">
+  <link rel="stylesheet" href="assets/site.css?v=20260515-3">
   <script src="assets/site.js" defer></script>
 </head>
 <body class="cs-editorial">
@@ -25,108 +25,130 @@
     </header>
 
     <main>
-      <div class="cs-wrap">
-
-        <div class="cs-hero reveal">
-          <div class="cs-tag">Case Study — UX Research &amp; Design</div>
+      <section class="cs-hero reveal">
+        <div class="cs-hero-text">
+          <p class="cs-tag">Case Study — UX Research &amp; Design</p>
           <h1 class="cs-title">Sharesies<br><em>Investing 101</em></h1>
-          <div class="cs-meta">
-            <div class="cs-meta-item">
-              <div class="cs-meta-label">Role</div>
-              <div class="cs-meta-value">UX Researcher &amp; Designer</div>
+          <div class="cs-meta" aria-label="Project details">
+            <div class="cs-meta-row">
+              <span class="cs-meta-label">Role</span>
+              <p class="cs-meta-value">UX Researcher &amp; Designer</p>
             </div>
-            <div class="cs-meta-item">
-              <div class="cs-meta-label">Team</div>
-              <div class="cs-meta-value">3 designers</div>
+            <div class="cs-meta-row">
+              <span class="cs-meta-label">Team</span>
+              <p class="cs-meta-value">3 designers</p>
             </div>
-            <div class="cs-meta-item">
-              <div class="cs-meta-label">Type</div>
-              <div class="cs-meta-value">End-to-end UX project</div>
+            <div class="cs-meta-row">
+              <span class="cs-meta-label">Type</span>
+              <p class="cs-meta-value">End-to-end UX project</p>
             </div>
-            <div class="cs-meta-item">
-              <div class="cs-meta-label">Year</div>
-              <div class="cs-meta-value">2022</div>
+            <div class="cs-meta-row">
+              <span class="cs-meta-label">Year</span>
+              <p class="cs-meta-value">2022</p>
             </div>
           </div>
         </div>
+        <div class="cs-hero-image">
+          <img src="assets/images/investing-hero.png" alt="Investing 101 case study illustration">
+        </div>
+      </section>
 
-        <section class="cs-section reveal" aria-label="The Challenge">
-          <div class="cs-section-label">The Challenge</div>
-          <h2 class="cs-section-title">Why many potential investors never begin</h2>
-          <p class="cs-body">Many potential investors never begin. Despite growing platforms like Sharesies, a significant portion of their target audience remains on the sidelines, held back by fear, confusion, and a lack of financial confidence. Our team was brought in to understand why, and design a solution to help.</p>
-          <img class="cs-img-full" src="assets/images/Screenshot_2024-07-30_at_5_46_53_PM_1.png" alt="Brief overview">
+      <div class="cs-body">
+
+        <section class="cs-section reveal">
+          <div class="cs-section-split">
+            <div class="cs-section-head">
+              <p class="cs-eyebrow">The Challenge</p>
+              <h2>Why many potential investors never begin</h2>
+            </div>
+            <div class="cs-prose">
+              <p>Many potential investors never begin. Despite growing platforms like Sharesies, a significant portion of their target audience remains on the sidelines, held back by fear, confusion, and a lack of financial confidence. Our team was brought in to understand why, and design a solution to help.</p>
+            </div>
+          </div>
         </section>
 
-        <hr class="cs-divider">
-
-        <section class="cs-section reveal" aria-label="Discovery">
-          <div class="cs-section-label">Discovery</div>
-          <h2 class="cs-section-title">Focusing on the people Sharesies hadn't yet reached</h2>
-          <p class="cs-body">We chose to focus exclusively on non-Sharesies users, people who had never signed up or who had dropped off, since Sharesies' existing research had only covered active customers. Our research combined desk research with in-depth interviews, followed by affinity mapping to surface patterns. From 32 findings we distilled 8 key insights.</p>
-
+        <section class="cs-section reveal">
+          <div class="cs-section-head">
+            <p class="cs-eyebrow">Discovery</p>
+            <h2>Focusing on the people Sharesies hadn't yet reached</h2>
+          </div>
+          <p class="cs-section-intro">We chose to focus exclusively on non-Sharesies users, people who had never signed up or who had dropped off, since Sharesies' existing research had only covered active customers. Our research combined desk research with in-depth interviews, followed by affinity mapping to surface patterns. From 32 findings we distilled 8 key insights.</p>
           <div class="cs-quote">
             <p>"How might we better understand the attitudes and behaviours that non-Sharesies users have towards money and investing?"</p>
           </div>
-
-          <img class="cs-img-full" src="assets/images/Group_292.png" alt="Key insight learnings">
-        </section>
-
-        <hr class="cs-divider">
-
-        <section class="cs-section reveal" aria-label="Design Direction">
-          <div class="cs-section-label">Design Direction</div>
-          <h2 class="cs-section-title">A pivot driven by what the research actually said</h2>
-          <p class="cs-body">Initial concepts explored integrating education into the sign-up flow, but testing quickly showed this created friction rather than reducing it. We pivoted. A competitive audit revealed a clear gap in Sharesies' educational offering. We tested two low-fidelity directions:</p>
-
-          <div class="cs-pills">
-            <span class="cs-pill">Structured desktop concept</span>
-            <span class="cs-pill">Interactive mobile concept</span>
-          </div>
-
-          <img class="cs-img-full" src="assets/images/Screenshot_2022-08-24_at_12_15_02_PM.png" alt="Low fidelity concepts">
-
-          <p class="cs-body">Concept testing with 4 participants revealed users wanted a combination of both, structured step-by-step content with interactive elements woven throughout.</p>
-
-          <img class="cs-img-full" src="assets/images/Screenshot_2022-08-24_at_12_12_16_PM.png" alt="Concept testing results">
-        </section>
-
-        <hr class="cs-divider">
-
-        <section class="cs-section reveal" aria-label="The Solution">
-          <div class="cs-section-label">The Solution</div>
-          <h2 class="cs-section-title">Investing Basics Mini Course</h2>
-          <p class="cs-body">A structured, interactive learning experience embedded in the Sharesies platform, helping new investors grasp the basics in 5 steps, at their own pace.</p>
-
-          <div class="cs-mockups">
-            <img class="cs-img-half" src="assets/images/New_Macbook_Pro_Mockup_Front_View_copy_2.png" alt="Desktop mockup">
-            <img class="cs-img-half" src="assets/images/Mobile_mockup.png" alt="Mobile mockup">
-          </div>
-
-          <img class="cs-img-full" src="assets/images/Screenshot_2022-08-24_at_12_09_09_PM.png" alt="High fidelity design">
-
-          <div class="cs-pills">
-            <span class="cs-pill">Sharesies design system</span>
-            <span class="cs-pill">Custom illustrations</span>
-            <span class="cs-pill">Step-by-step structure</span>
-            <span class="cs-pill">Knowledge quiz</span>
-            <span class="cs-pill">Accessibility considered</span>
+          <div class="cs-cards">
+            <article class="cs-card">
+              <h3>Research scope</h3>
+              <p>We studied patterns in how people learn about and engage with investing, then interviewed users outside the Sharesies ecosystem to surface unfiltered perspectives on the barriers they faced.</p>
+            </article>
+            <article class="cs-card">
+              <h3>What emerged</h3>
+              <p>We mapped 32 findings into eight key insights. A strong pattern emerged: investing felt intimidating, overly complex, and culturally distant from many potential users.</p>
+            </article>
+            <article class="cs-card">
+              <h3>Problem framing</h3>
+              <p>We used the research to define a clear how-might-we direction around helping people overcome uncertainty and build enough confidence to start investing.</p>
+            </article>
           </div>
         </section>
 
-        <hr class="cs-divider">
+        <div class="cs-image-break reveal">
+          <img src="assets/images/home-sharesies.png" alt="Sharesies design work">
+        </div>
 
-        <section class="cs-section reveal" aria-label="Validation">
-          <div class="cs-section-label">Validation</div>
-          <h2 class="cs-section-title">Two rounds of testing, four key improvements</h2>
-          <p class="cs-body">Usability testing with 4 participants across two rounds led to targeted improvements: search bar added, step directory hierarchy clarified, reading time placement fixed, and quiz stats expanded.</p>
-          <img class="cs-img-full" src="assets/images/Screenshot_2022-08-24_at_12_07_39_PM.png" alt="Usability testing results">
+        <section class="cs-section reveal">
+          <div class="cs-section-split">
+            <div class="cs-section-head">
+              <p class="cs-eyebrow">Design Direction</p>
+              <h2>A pivot driven by what the research actually said</h2>
+            </div>
+            <div class="cs-prose">
+              <p>Initial concepts explored integrating education into the sign-up flow, but testing quickly showed this created friction rather than reducing it. We pivoted. A competitive audit revealed a clear gap in Sharesies' educational offering. We tested two low-fidelity directions:</p>
+              <div class="cs-pills">
+                <span class="cs-pill">Structured desktop concept</span>
+                <span class="cs-pill">Interactive mobile concept</span>
+              </div>
+              <p>Concept testing with 4 participants revealed users wanted a combination of both, structured step-by-step content with interactive elements woven throughout.</p>
+            </div>
+          </div>
         </section>
 
-        <hr class="cs-divider">
+        <section class="cs-section reveal">
+          <div class="cs-section-split">
+            <div class="cs-section-head">
+              <p class="cs-eyebrow">Solution</p>
+              <h2>Investing Basics Mini Course</h2>
+            </div>
+            <div class="cs-prose">
+              <p>A structured, interactive learning experience embedded in the Sharesies platform, helping new investors grasp the basics in 5 steps, at their own pace.</p>
+              <div class="cs-pills">
+                <span class="cs-pill">Sharesies design system</span>
+                <span class="cs-pill">Custom illustrations</span>
+                <span class="cs-pill">Step-by-step structure</span>
+                <span class="cs-pill">Knowledge quiz</span>
+                <span class="cs-pill">Accessibility considered</span>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        <section class="cs-section reveal" aria-label="Reflection">
-          <div class="cs-section-label">Reflection</div>
-          <h2 class="cs-section-title">What I took away</h2>
+        <section class="cs-section reveal">
+          <div class="cs-section-split">
+            <div class="cs-section-head">
+              <p class="cs-eyebrow">Validation</p>
+              <h2>Two rounds of testing, four key improvements</h2>
+            </div>
+            <div class="cs-prose">
+              <p>Usability testing with 4 participants across two rounds led to targeted improvements: search bar added, step directory hierarchy clarified, reading time placement fixed, and quiz stats expanded.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="cs-section reveal">
+          <div class="cs-section-head">
+            <p class="cs-eyebrow">Reflection</p>
+            <h2>What I took away</h2>
+          </div>
           <div class="cs-reflection">
             <div class="cs-reflection-card">
               <h4>Learnings</h4>
