@@ -1357,9 +1357,8 @@ body.cs-editorial .button-outline:hover {
 
 /* Solution full-bleed image block */
 .cs-solution-images {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-top: 3rem;
+  width: 100%;
+  padding: 2rem 0 3rem;
   display: grid;
   gap: 1rem;
 }
