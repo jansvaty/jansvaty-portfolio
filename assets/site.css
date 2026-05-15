@@ -1505,7 +1505,7 @@ body.home-page .button-outline:hover {
 
 /* Hero */
 .hp-hero {
-  width: min(960px, calc(100% - 4rem));
+  width: min(1200px, calc(100% - 4rem));
   margin: 5rem auto 0;
   padding-bottom: 5rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
