@@ -1862,7 +1862,7 @@ body.home-page .hp-project h2 {
   gap: 1.5rem;
 }
 
-.ab-hero h1 {
+body.cs-editorial .ab-hero h1 {
   max-width: none;
   font-size: clamp(2.2rem, 4vw, 3.5rem);
 }
