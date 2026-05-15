@@ -1529,8 +1529,10 @@ body.home-page h1 em {
 
 .hp-wave {
   display: inline-block;
+  font-size: 1.28em;
   font-style: normal;
   margin-right: 0.1em;
+  vertical-align: -0.06em;
 }
 
 .hp-intro-line {
