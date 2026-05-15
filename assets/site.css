@@ -1355,10 +1355,10 @@ body.cs-editorial .button-outline:hover {
   font-family: "DM Sans", sans-serif;
 }
 
-/* Solution full-bleed image block */
+/* Solution image block */
 .cs-solution-images {
-  width: 100%;
-  padding: 2rem 0 3rem;
+  width: min(1200px, calc(100% - 4rem));
+  margin: 3rem auto;
   display: grid;
   gap: 1rem;
 }
@@ -1379,6 +1379,12 @@ body.cs-editorial .button-outline:hover {
   width: 100%;
   display: block;
   border-radius: 12px;
+}
+
+@media (max-width: 720px) {
+  .cs-solution-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Reflection cards */
