@@ -1513,7 +1513,7 @@ body.home-page .button-outline:hover {
 
 .hp-greeting {
   font-family: "DM Sans", sans-serif;
-  font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+  font-size: clamp(1.6rem, 2.6vw, 2.1rem);
   color: #555;
   margin: 0 0 0.5rem;
   line-height: 1.4;
