@@ -1536,6 +1536,7 @@ body.home-page h1 em {
 .hp-intro-line {
   display: block;
   white-space: nowrap;
+  margin-bottom: 0.45em;
 }
 
 .hp-title-line {
