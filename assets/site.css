@@ -1853,10 +1853,6 @@ body.home-page .hp-project h2 {
 .ab-hero {
   width: min(1200px, calc(100% - 4rem));
   margin: 4rem auto 0;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: clamp(3rem, 6vw, 5rem);
-  align-items: start;
   padding-bottom: 5rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 }
