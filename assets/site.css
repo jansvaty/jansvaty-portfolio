@@ -1885,6 +1885,8 @@ body.cs-editorial .ab-hero h1 {
 
 .ab-section-h2 {
   margin-bottom: 2.5rem;
+  max-width: none;
+  white-space: nowrap;
 }
 
 .cs-card ul {
