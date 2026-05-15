@@ -1367,8 +1367,9 @@ body.cs-editorial .button-outline:hover {
 }
 
 .cs-solution-hero {
-  width: 100%;
+  width: min(1200px, calc(100% - 4rem));
   display: block;
+  margin: 0 auto;
 }
 
 .cs-solution-grid {
