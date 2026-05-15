@@ -1511,19 +1511,11 @@ body.home-page .button-outline:hover {
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 }
 
-.hp-greeting {
-  font-family: "DM Sans", sans-serif;
-  font-size: 1.15rem;
-  color: #555;
-  margin: 0 0 0.75rem;
-  line-height: 1.4;
-}
-
 body.home-page h1 {
-  font-size: clamp(3.5rem, 8vw, 7rem);
-  line-height: 1.0;
-  letter-spacing: -0.03em;
-  max-width: none;
+  font-size: clamp(2.35rem, 4.6vw, 5.2rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  max-width: 1080px;
   color: #1c1c1c;
   margin: 0;
 }
@@ -1531,6 +1523,12 @@ body.home-page h1 {
 body.home-page h1 em {
   font-style: italic;
   color: #D4537E;
+}
+
+.hp-wave {
+  display: inline-block;
+  font-style: normal;
+  margin-right: 0.1em;
 }
 
 /* Work section */
