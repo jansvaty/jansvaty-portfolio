@@ -1355,24 +1355,19 @@ body.cs-editorial .button-outline:hover {
   font-family: "DM Sans", sans-serif;
 }
 
-/* Solution image block */
-.cs-solution-images {
-  width: min(1200px, calc(100% - 4rem));
-  margin: 3rem auto;
-  display: grid;
-  gap: 1rem;
-}
-
+/* Solution images */
 .cs-solution-hero {
   width: 100%;
   display: block;
   border-radius: 12px;
+  margin-top: 2rem;
 }
 
 .cs-solution-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 .cs-solution-grid img {
