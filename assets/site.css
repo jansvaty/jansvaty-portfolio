@@ -1229,6 +1229,11 @@ body.cs-editorial .button-outline:hover {
   display: block;
 }
 
+.cs-hero-image--sm img {
+  width: 50%;
+  margin: 0 auto;
+}
+
 /* Body content area */
 .cs-body {
   width: min(1200px, calc(100% - 4rem));
