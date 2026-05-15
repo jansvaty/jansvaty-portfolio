@@ -1360,8 +1360,6 @@ body.cs-editorial .button-outline:hover {
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-top: 3rem;
-  padding: 0 2rem;
-  box-sizing: border-box;
   display: grid;
   gap: 1rem;
 }
