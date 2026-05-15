@@ -1355,25 +1355,32 @@ body.cs-editorial .button-outline:hover {
   font-family: "DM Sans", sans-serif;
 }
 
-/* Solution images */
+/* Solution section — text constrained, images full width */
+.cs-solution-section {
+  padding: 5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.cs-solution-text {
+  width: min(1200px, calc(100% - 4rem));
+  margin: 0 auto 2.5rem;
+}
+
 .cs-solution-hero {
   width: 100%;
   display: block;
-  border-radius: 12px;
-  margin-top: 2rem;
 }
 
 .cs-solution-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .cs-solution-grid img {
   width: 100%;
   display: block;
-  border-radius: 12px;
 }
 
 @media (max-width: 720px) {
