@@ -1509,6 +1509,24 @@ body.home-page .button-outline:hover {
   margin: 5rem auto 0;
   padding-bottom: 5rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.hp-hero-video {
+  border-radius: 1rem;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.hp-hero-video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
 }
 
 .hp-greeting {
@@ -1805,6 +1823,10 @@ body.home-page .hp-project h2 {
 
   .hp-project-visual img {
     max-height: 14rem;
+  }
+
+  .hp-hero {
+    grid-template-columns: 1fr;
   }
 }
 
