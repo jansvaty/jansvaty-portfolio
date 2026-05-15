@@ -1355,6 +1355,35 @@ body.cs-editorial .button-outline:hover {
   font-family: "DM Sans", sans-serif;
 }
 
+/* Solution full-bleed image block */
+.cs-solution-images {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: 3rem;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  display: grid;
+  gap: 1rem;
+}
+
+.cs-solution-hero {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.cs-solution-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.cs-solution-grid img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
 /* Reflection cards */
 .cs-reflection {
   display: grid;
