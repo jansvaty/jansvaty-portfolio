@@ -1513,10 +1513,10 @@ body.home-page .button-outline:hover {
 }
 
 body.home-page h1 {
-  font-size: clamp(1.55rem, 2.2vw, 2.45rem);
-  line-height: 1.22;
+  font-size: clamp(1.75rem, 2.55vw, 2.8rem);
+  line-height: 1.18;
   letter-spacing: 0;
-  max-width: 720px;
+  max-width: 780px;
   color: #1c1c1c;
   margin: 0;
   text-align: left;
@@ -1531,6 +1531,15 @@ body.home-page h1 em {
   display: inline-block;
   font-style: normal;
   margin-right: 0.1em;
+}
+
+.hp-intro-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.hp-title-line {
+  display: block;
 }
 
 /* Work section */
