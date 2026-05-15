@@ -1883,7 +1883,7 @@ body.cs-editorial .ab-hero h1 {
   display: block;
 }
 
-.ab-section-h2 {
+body.cs-editorial .ab-section-h2 {
   margin-bottom: 2.5rem;
   max-width: none;
   white-space: nowrap;
