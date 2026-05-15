@@ -6,12 +6,12 @@
   <title>About | Jan Svaty</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/site.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css?v=20260515-ab1">
   <script src="assets/site.js" defer></script>
 </head>
-<body>
-  <div class="site-shell">
+<body class="cs-editorial">
+  <div class="site-shell cs-shell">
     <header class="site-header">
       <a class="brand home-brand" href="index.html" aria-label="Jan Svaty home">
         <img src="assets/images/logo-mark.png" alt="Jan Svaty logo">
@@ -19,104 +19,106 @@
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" class="site-nav">
         <a href="index.html">Work</a>
-        <a href="contact.html">Contact</a>
-        <a href="mailto:jan.svaty@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/jansvaty/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="button button-outline" href="contact.html">Contact me</a>
       </nav>
     </header>
 
     <main>
-      <section class="page-hero reveal">
-        <div>
-          <p class="eyebrow">About</p>
-          <h1>My background spans Prague, New Zealand, and teams that care about people using technology well.</h1>
-          <p class="lede">Work at Victoria University of Wellington, New Zealand Customs, and freelance UX/UI projects shaped how I approach design: practical, human, and grounded in clarity.</p>
+      <section class="ab-hero reveal">
+        <div class="ab-hero-text">
+          <p class="cs-eyebrow">About</p>
+          <h1>Product Designer from Prague, based in Wellington.</h1>
+          <p class="ab-lead">I hold a Master of User Experience Design from Victoria University of Wellington. I have a deep interest in human-centred design thinking and believe the best solutions come from combining visual design and software development to make complex things simple for real people.</p>
         </div>
-        <img class="portrait" src="assets/images/about-portrait.png" alt="Portrait illustration for Jan Svaty">
-      </section>
-
-      <section class="section reveal">
-        <div class="split-layout">
-          <div>
-            <h2>Approach</h2>
-          </div>
-          <div>
-            <p>My design journey has been demanding, non-linear, and worthwhile. I’m proud to contribute to New Zealand’s digital design scene while continuing to build from a broad professional background.</p>
-            <p>That mix of experience helps me move between research, interface design, content structure, stakeholder communication, and implementation detail without losing the thread.</p>
-          </div>
+        <div class="ab-hero-portrait">
+          <img src="assets/images/about-portrait.png" alt="Jan Svaty portrait illustration">
         </div>
       </section>
 
-      <section class="section reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Education & skills</p>
-          <h2>Formal study plus self-driven technical practice.</h2>
-        </div>
-        <div class="detail-grid">
-          <article class="detail-card">
-            <h3>Education</h3>
-            <ul>
-              <li>Master of User Experience Design, Victoria University of Wellington</li>
-              <li>Introduction to Digital Accessibility micro-credential</li>
-              <li>Codecademy certificate in HTML, CSS, and JavaScript</li>
-            </ul>
-          </article>
-          <article class="detail-card">
-            <h3>Tools</h3>
-            <ul>
-              <li>Figma and Adobe Creative Suite</li>
-              <li>Premiere Pro and After Effects</li>
-              <li>HTML, CSS, JavaScript, Webflow, Squarespace, basic React</li>
-              <li>Totara LMS administration and content work</li>
-            </ul>
-          </article>
-          <article class="detail-card">
-            <h3>Recognition</h3>
-            <ul>
-              <li>2019 Derek Fenn Excellence Award winner</li>
-              <li>2012 Volunteer of the Month, Pique magazine, Whistler</li>
-            </ul>
-          </article>
-        </div>
-      </section>
+      <div class="cs-body">
 
-      <section class="section reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Experience</p>
-          <h2>Roles that built the portfolio.</h2>
-        </div>
-        <div class="timeline">
-          <div class="timeline-item">
-            <h3>Instructional Designer</h3>
-            <p>New Zealand Customs Service • November 2022 to present</p>
+        <section class="cs-section reveal">
+          <p class="cs-eyebrow">Approach</p>
+          <div class="cs-section-split">
+            <h2>Human-centred thinking, visual design, and code.</h2>
+            <div class="cs-prose">
+              <p>I approach every project by understanding the people who will use it. Human-centred design thinking guides how I frame problems, explore solutions, and validate ideas with real users before committing to a direction.</p>
+              <p>That process sits alongside a practical technical toolkit. I move comfortably between interface design, content structure, and front-end implementation, which means fewer handoff gaps and faster iteration from idea to working product.</p>
+              <p>Growing up in Prague and building a career in New Zealand has given me a broad perspective on how culture and context shape design decisions.</p>
+            </div>
           </div>
-          <div class="timeline-item">
-            <h3>UX / UI freelance projects</h3>
-            <p>Various companies in New Zealand and overseas • August 2022 to October 2022</p>
+        </section>
+
+        <section class="cs-section reveal">
+          <p class="cs-eyebrow">Education &amp; skills</p>
+          <h2 class="ab-section-h2">Formal study plus self-driven technical practice.</h2>
+          <div class="cs-cards">
+            <article class="cs-card">
+              <h3>Education</h3>
+              <ul>
+                <li>Master of User Experience Design, Victoria University of Wellington</li>
+                <li>Introduction to Digital Accessibility micro-credential</li>
+                <li>Codecademy certificate in HTML, CSS, and JavaScript</li>
+              </ul>
+            </article>
+            <article class="cs-card">
+              <h3>Tools</h3>
+              <ul>
+                <li>Figma and Adobe Creative Suite</li>
+                <li>Premiere Pro and After Effects</li>
+                <li>HTML, CSS, JavaScript, Webflow, Squarespace, basic React</li>
+                <li>Totara LMS administration and content work</li>
+              </ul>
+            </article>
+            <article class="cs-card">
+              <h3>Recognition</h3>
+              <ul>
+                <li>2019 Derek Fenn Excellence Award winner</li>
+                <li>2012 Volunteer of the Month, Pique magazine, Whistler</li>
+              </ul>
+            </article>
           </div>
-          <div class="timeline-item">
-            <h3>IT Service Desk Analyst</h3>
-            <p>Ministry of Education, Wellington • May 2021 to July 2021</p>
+        </section>
+
+        <section class="cs-section reveal">
+          <p class="cs-eyebrow">Experience</p>
+          <h2 class="ab-section-h2">Roles that built the portfolio.</h2>
+          <div class="ab-timeline">
+            <div class="ab-timeline-item">
+              <h3>Instructional Designer</h3>
+              <p>New Zealand Customs Service • November 2022 to present</p>
+            </div>
+            <div class="ab-timeline-item">
+              <h3>UX / UI Freelance Projects</h3>
+              <p>Various companies in New Zealand and overseas • August 2022 to October 2022</p>
+            </div>
+            <div class="ab-timeline-item">
+              <h3>IT Service Desk Analyst</h3>
+              <p>Ministry of Education, Wellington • May 2021 to July 2021</p>
+            </div>
+            <div class="ab-timeline-item">
+              <h3>Guest Services Manager</h3>
+              <p>DoubleTree by Hilton, Wellington • February 2020 to May 2021</p>
+            </div>
+            <div class="ab-timeline-item">
+              <h3>Porter / Concierge / Concierge Supervisor</h3>
+              <p>Bolton and Sofitel Hotel, Wellington • May 2015 to January 2020</p>
+            </div>
+            <div class="ab-timeline-item">
+              <h3>IT Specialist / Production Coordinator</h3>
+              <p>Boxed s.r.o., Prague • January 2013 to April 2015</p>
+            </div>
           </div>
-          <div class="timeline-item">
-            <h3>Guest Services Manager</h3>
-            <p>DoubleTree by Hilton, Wellington • February 2020 to May 2021</p>
-          </div>
-          <div class="timeline-item">
-            <h3>Porter / Concierge / Concierge Supervisor</h3>
-            <p>Bolton and Sofitel Hotel, Wellington • May 2015 to January 2020</p>
-          </div>
-          <div class="timeline-item">
-            <h3>IT Specialist / Production Coordinator</h3>
-            <p>Boxed s.r.o., Prague • January 2013 to April 2015</p>
-          </div>
-        </div>
-      </section>
+        </section>
+
+      </div>
     </main>
 
-    <footer class="site-footer reveal">
+    <footer class="site-footer cs-footer reveal">
       <div>
-        <p class="eyebrow">Location</p>
-        <p>Prague, Vancouver, Calgary, Auckland, Wellington & remote</p>
+        <p class="eyebrow">Work</p>
+        <a class="footer-link" href="index.html">Back to portfolio</a>
       </div>
       <div>
         <p class="eyebrow">Contact</p>
