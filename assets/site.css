@@ -1369,7 +1369,7 @@ body.cs-editorial .button-outline:hover {
 .cs-solution-hero {
   width: min(1200px, calc(100% - 4rem));
   display: block;
-  margin: 0 auto;
+  margin: 3rem auto 0;
 }
 
 .cs-solution-grid {
