@@ -1560,17 +1560,33 @@ body.home-page .button-outline:hover {
 }
 
 .hp-hero-video {
+  display: block;
+  position: relative;
   border-radius: 1rem;
   overflow: hidden;
   aspect-ratio: 16 / 9;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
-.hp-hero-video iframe {
+.hp-hero-video img {
   width: 100%;
   height: 100%;
-  border: 0;
+  object-fit: cover;
   display: block;
+}
+
+.hp-video-play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.15);
+  transition: background 200ms ease;
+}
+
+.hp-hero-video:hover .hp-video-play {
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .hp-greeting {
