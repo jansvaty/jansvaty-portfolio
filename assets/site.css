@@ -1531,7 +1531,10 @@ body.home-page h1 em {
   display: inline-block;
   font-size: 1.28em;
   font-style: normal;
-  margin-right: 0.1em;
+  left: -1.25em;
+  margin-right: 0;
+  position: absolute;
+  top: -0.08em;
   vertical-align: -0.06em;
 }
 
@@ -1539,6 +1542,7 @@ body.home-page h1 em {
   display: block;
   white-space: nowrap;
   margin-bottom: 0.45em;
+  position: relative;
 }
 
 .hp-title-line {
