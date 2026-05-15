@@ -1310,6 +1310,15 @@ body.cs-editorial .button-outline:hover {
   display: block;
 }
 
+/* Spacing when quote or cards follow a split block */
+.cs-section-split + .cs-quote {
+  margin-top: 3rem;
+}
+
+.cs-quote + .cs-cards {
+  margin-top: 3rem;
+}
+
 /* Quote */
 .cs-quote {
   border-left: 3px solid #D4537E;
