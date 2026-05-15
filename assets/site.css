@@ -1848,6 +1848,21 @@ body.home-page .hp-project h2 {
   }
 }
 
+/* ─── Contact page ─────────────────────────── */
+
+.ct-link {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #D4537E;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.ct-link:hover {
+  color: #b03562;
+}
+
 /* ─── About page ─────────────────────────── */
 
 .ab-hero {
