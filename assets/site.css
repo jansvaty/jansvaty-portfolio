@@ -910,6 +910,11 @@ body.sharesies-page {
     width: min(100% - 1rem, 1180px);
   }
 
+  .home-shell,
+  .cs-shell {
+    width: 100%;
+  }
+
   .site-header {
     align-items: start;
     flex-wrap: wrap;
