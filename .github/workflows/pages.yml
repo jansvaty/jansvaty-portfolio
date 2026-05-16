@@ -27,8 +27,8 @@ jobs:
       - name: Build static bundle
         run: |
           mkdir -p dist
-          cp index.html about.html contact.html sharesies-investing-101.html impact-investing-network.html stake-design-system.html customs-resources.html dist/
-          cp CNAME .nojekyll 404.html dist/
+          cp *.html dist/
+          cp CNAME .nojekyll dist/
           cp -R assets dist/assets
 
       - name: Setup Pages
