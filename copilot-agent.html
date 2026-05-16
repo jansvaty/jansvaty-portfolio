@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerAutomated AI Agent | Jan Svaty</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css?v=20260516-copilot1">
+  <script src="assets/site.js" defer></script>
+  <style>
+  /* ── Agent Flow Infographic ───────────────────────── */
+  .af-container { margin-top: 3rem; }
+
+  .af-labels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 1.25rem;
+  }
+  .af-label {
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #aaa;
+  }
+  .af-label:last-child { text-align: right; }
+
+  .af-flow { position: relative; }
+  .af-flow::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, #d1d5db 3rem, #d1d5db calc(100% - 3rem), transparent);
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .af-step {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    z-index: 1;
+  }
+  .af-left  { padding: 0 2rem 0 0; }
+  .af-right { padding: 0 0 0 2rem; }
+
+  /* Node cards */
+  .af-node {
+    background: #fff;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 0.7rem 0.9rem;
+    opacity: 0;
+    transform: translateX(-18px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+  }
+  .af-step.af-visible .af-node { opacity: 1; transform: none; }
+
+  .af-node--action { border-color: #006E91; background: #f0fdf9; }
+  .af-node--flow   { border-color: #0369A1; background: #f0f9ff; }
+  .af-node--email  { border-color: #0369A1; background: #f0f9ff; }
+
+  .af-tag {
+    display: inline-block;
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.35rem;
+  }
+  .af-tag--trigger    { background: #FEF3C7; color: #92400E; }
+  .af-tag--message    { background: #DCFCE7; color: #166534; }
+  .af-tag--question   { background: #DBEAFE; color: #1E40AF; }
+  .af-tag--condition  { background: #F3E8FF; color: #6B21A8; }
+  .af-tag--action     { background: #006E91; color: #fff; }
+  .af-tag--flow       { background: #0369A1; color: #fff; }
+  .af-tag--email      { background: #0369A1; color: #fff; }
+
+  .af-node-title {
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #1c1c1c;
+    margin: 0 0 0.2rem;
+    line-height: 1.4;
+  }
+  .af-node-detail {
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.7rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+  }
+  .af-var {
+    display: inline-block;
+    font-family: monospace;
+    font-size: 0.65rem;
+    background: #f3f4f6;
+    color: #374151;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    margin-top: 0.3rem;
+  }
+  .af-phrases { margin: 0.25rem 0 0; padding-left: 1rem; }
+  .af-phrases li {
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.7rem;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  /* Connector arrow between nodes */
+  .af-connector {
+    display: flex;
+    justify-content: center;
+    padding: 0.25rem 2rem 0.25rem 0;
+    opacity: 0;
+    transition: opacity 0.3s ease 0.5s;
+  }
+  .af-step.af-visible .af-connector { opacity: 1; }
+  .af-connector::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 1.5rem;
+    background: #d1d5db;
+  }
+
+  /* Branch sub-nodes */
+  .af-branch {
+    margin-top: 0.4rem;
+    padding-left: 0.75rem;
+    border-left: 2px solid #e5e7eb;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.4s ease 0.15s, transform 0.4s ease 0.15s;
+  }
+  .af-step.af-visible .af-branch { opacity: 1; transform: none; }
+
+  /* Flow sub-steps within action node */
+  .af-flow-steps { margin-top: 0.5rem; display: grid; gap: 0.4rem; }
+  .af-flow-item {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.7rem;
+    color: #555;
+  }
+  .af-flow-icon {
+    font-size: 0.75rem;
+    flex-shrink: 0;
+    margin-top: 0.05rem;
+  }
+
+  /* Chat column */
+  .af-chat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    padding-bottom: 0.75rem;
+    opacity: 0;
+    transform: translateX(18px);
+    transition: opacity 0.45s ease 0.25s, transform 0.45s ease 0.25s;
+  }
+  .af-step.af-visible .af-chat { opacity: 1; transform: none; }
+
+  .af-bubble {
+    max-width: 88%;
+    padding: 0.55rem 0.8rem;
+    border-radius: 14px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+  .af-bubble--bot  { background: #f3f4f6; color: #1c1c1c; border-bottom-left-radius: 3px; align-self: flex-start; }
+  .af-bubble--user { background: #006E91; color: #fff; border-bottom-right-radius: 3px; align-self: flex-end; }
+
+  .af-choices { display: flex; flex-direction: column; gap: 0.3rem; align-self: flex-start; }
+  .af-choice-btn {
+    padding: 0.35rem 0.75rem;
+    border: 1.5px solid #006E91;
+    border-radius: 20px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.72rem;
+    color: #006E91;
+    background: #fff;
+    cursor: default;
+    white-space: nowrap;
+  }
+  .af-choice-btn.af-selected { background: #006E91; color: #fff; }
+
+  .af-processing {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 0.8rem;
+    background: #f3f4f6;
+    border-radius: 14px;
+    border-bottom-left-radius: 3px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.75rem;
+    color: #666;
+    align-self: flex-start;
+  }
+  .af-dots { display: flex; gap: 3px; }
+  .af-dot { width: 5px; height: 5px; border-radius: 50%; background: #999; animation: af-pulse 1.2s ease-in-out infinite; }
+  .af-dot:nth-child(2) { animation-delay: 0.2s; }
+  .af-dot:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes af-pulse {
+    0%, 100% { opacity: 0.3; transform: scale(0.85); }
+    50% { opacity: 1; transform: scale(1.1); }
+  }
+
+  .af-email-card {
+    background: #fff;
+    border: 1.5px solid #d1d5db;
+    border-radius: 10px;
+    padding: 0.65rem 0.85rem;
+    align-self: flex-start;
+    max-width: 100%;
+  }
+  .af-email-subject { font-family: "DM Sans", sans-serif; font-size: 0.75rem; font-weight: 700; color: #1c1c1c; margin: 0 0 0.3rem; }
+  .af-email-row { font-family: "DM Sans", sans-serif; font-size: 0.68rem; color: #666; margin: 0; line-height: 1.65; }
+  .af-email-row strong { color: #444; }
+
+  .af-summary-card {
+    background: #f0fdf9;
+    border: 1.5px solid #006E91;
+    border-radius: 10px;
+    padding: 0.65rem 0.85rem;
+    align-self: flex-start;
+    max-width: 100%;
+  }
+  .af-summary-title { font-family: "DM Sans", sans-serif; font-size: 0.72rem; font-weight: 700; color: #006E91; margin: 0 0 0.35rem; }
+  .af-summary-row { font-family: "DM Sans", sans-serif; font-size: 0.67rem; color: #555; margin: 0.1rem 0; line-height: 1.5; }
+  .af-summary-row strong { color: #1c1c1c; }
+
+  @media (max-width: 700px) {
+    .af-step { grid-template-columns: 1fr; }
+    .af-flow::before { display: none; }
+    .af-left { padding: 0; }
+    .af-right { padding: 0.5rem 0 0; }
+    .af-connector { padding-right: 0; }
+    .af-labels { display: none; }
+  }
+  </style>
+</head>
+<body class="cs-editorial cs-copilot">
+  <div class="site-shell cs-shell">
+    <header class="site-header">
+      <a class="brand home-brand" href="index.html" aria-label="Jan Svaty home">
+        <img src="assets/images/logo-mark.png" alt="Jan Svaty logo">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav">
+        <a href="about.html">Learn about me</a>
+        <a href="https://www.linkedin.com/in/jansvaty/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="button button-outline" href="contact.html">Contact me</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="cs-hero reveal">
+        <div class="cs-hero-text">
+          <p class="cs-tag">Case Study - AI &amp; Instructional Design</p>
+          <h1 class="cs-title">PowerAutomated<br><em style="color: #006E91;">AI Agent</em></h1>
+          <div class="cs-meta" aria-label="Project details">
+            <div class="cs-meta-row">
+              <span class="cs-meta-label">Role</span>
+              <p class="cs-meta-value">UX, Instructional Design, User Research, Coding</p>
+            </div>
+            <div class="cs-meta-row">
+              <span class="cs-meta-label">Client</span>
+              <p class="cs-meta-value">New Zealand Customs Service</p>
+            </div>
+            <div class="cs-meta-row">
+              <span class="cs-meta-label">Deliverables</span>
+              <p class="cs-meta-value">AI agent, Power Automate flow, cheatsheets, instructional videos</p>
+            </div>
+            <div class="cs-meta-row">
+              <span class="cs-meta-label">Year</span>
+              <p class="cs-meta-value">2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="cs-hero-image">
+          <img src="assets/images/copilot-hero.png" alt="Microsoft Copilot Studio - AI agent builder">
+        </div>
+      </section>
+
+      <div class="cs-body">
+
+        <section class="cs-section reveal">
+          <p class="cs-eyebrow">Challenge</p>
+          <div class="cs-section-split">
+            <h2>Replacing a manual process with an intelligent first point of contact</h2>
+            <div class="cs-prose">
+              <p>The Learning Design team at New Zealand Customs Service relied on a traditional form to handle requests for new course pages - a slow, inconsistently filled-out process that created back-and-forth between the team administrator and clients before work could even begin.</p>
+              <p>With AI tools rapidly becoming available inside the Microsoft 365 ecosystem, there was an opportunity to streamline this intake process, reduce manual effort, and improve the quality of information captured upfront.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="cs-section reveal">
+          <p class="cs-eyebrow">Approach</p>
+          <div class="cs-section-split">
+            <h2>Self-driven, end-to-end - from research to working product</h2>
+            <div class="cs-prose">
+              <p>This was a self-initiated project. I identified the opportunity, conducted user research with the team to understand pain points in the existing process, and designed and built the solution independently.</p>
+              <p>The project spanned UX design, conversational flow architecture, Power Automate integration, and instructional design - documenting the entire process so colleagues could build on it.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="cs-section reveal">
+          <p class="cs-eyebrow">Solution</p>
+          <div class="cs-section-split">
+            <h2>An AI agent that guides clients through the request process</h2>
+            <div class="cs-prose">
+              <p>Built in Microsoft Copilot Studio, the agent serves as an intelligent intake form. It guides clients through a structured conversation - gathering all the information the Learning Design team needs to begin work on a new course page - then automatically compiles the responses and sends a formatted summary to the team via Outlook.</p>
+              <p>The back end connects Copilot Studio topics and triggers to a Power Automate flow, which processes the collected answers using dynamic text and routes the completed request to the appropriate inbox - no manual chasing required.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="cs-section">
+          <p class="cs-eyebrow">Flow</p>
+          <div class="cs-section-split">
+            <h2>The agent, step by step</h2>
+            <div class="cs-prose">
+              <p>Scroll to watch the back-end logic unfold alongside the user's experience. Back-end Copilot Studio logic on the left, the live conversation on the right.</p>
+            </div>
+          </div>
+
+          <div class="af-container">
+            <div class="af-labels">
+              <span class="af-label">← Back-end · Copilot Studio</span>
+              <span class="af-label">Front-end · User →</span>
+            </div>
+
+            <div class="af-flow">
+
+              <!-- 1. Trigger -->
+              <div class="af-step">
+                <div class="af-left">
+                  <div class="af-node">
+                    <span class="af-tag af-tag--trigger">Trigger</span>
+                    <p class="af-node-title">User says a phrase</p>
+                    <ul class="af-phrases">
+                      <li>"Request new course page"</li>
+                      <li>"Create a course page"</li>
+                      <li>"Add new course page to the learning room"</li>
+                      <li>"I need a new course page"</li>
+                      <li>"Submit request for a course page"</li>
+                    </ul>
+                  </div>
+                  <div class="af-connector"></div>
+                </div>
+                <div class="af-right">
+                  <div class="af-chat">
+                    <div class="af-bubble af-bubble--user">"I want a new course page"</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2. Message - Welcome -->
+              <div class="af-step">
+                <div class="af-left">
+                  <div class="af-node">
+                    <span class="af-tag af-tag--message">Message</span>
+                    <p class="af-node-title">New course page request</p>
+                    <p class="af-node-detail">Welcome message displayed. Instructs user to fill out as much information as possible.</p>
+                  </div>
+                  <div class="af-connector"></div>
+                </div>
+                <div class="af-right">
+                  <div class="af-chat">
+                    <div class="af-bubble af-bubble--bot">New course page request - in order to create a new course page please fill out as much information as possible. A Learning Room advisor will then work with you to develop the course page.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3. Q: Course name -->
+              <div class="af-step">
+                <div class="af-left">
+                  <div class="af-node">
+                    <span class="af-tag af-tag--question">Question</span>
+                    <p class="af-node-title">What is the name of the course?</p>
+                    <p class="af-node-detail">Identify: User's entire response</p>
+                    <span class="af-var">{x} CourseName | string</span>
+                  </div>
+                  <div class="af-connector"></div>
+                </div>
+                <div class="af-right">
+                  <div class="af-chat">
+                    <div class="af-bubble af-bubble--bot">What is the name of the course?</div>
+                    <div class="af-bubble af-bubble--user">"Maritime unit"</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4. Q: Course owner -->
+              <div class="af-step">
+                <div class="af-left">
+                  <div class="af-node">
+                    <span class="af-tag af-tag--question">Question</span>
+                    <p class="af-node-title">Who will be the course owner?</p>
+                    <p class="af-node-detail">The team taking responsibility for the learning.</p>
+                    <span class="af-var">{x} CourseOwner | string</span>
+                  </div>
+                  <div class="af-connector"></div>
+                </div>
+                <div class="af-right">
+                  <div class="af-chat">
+                    <div class="af-bubble af-bubble--bot">Who will be the course owner? (This should be the team taking responsibility for the learning.)</div>
+                    <div class="af-bubble af-bubble--user">"Maritime unit team"</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 5. Q: Course contact -->
+              <div class="af-step">
+                <div class="af-left">
+                  <div class="af-node">
+                    <span class="af-tag af-tag--question">Question</span>
+                    <p class="af-node-title">What is the contact for the owner?</p>
+                    <p class="af-node-detail">Usually an email address for the responsible person or team.</p>
+                    <span class="af-var">{x} CourseContact | string</span>
+                  </div>
+                  <div class="af-connector"></div>
+                </div>
+                <div class="af-right">
+                  <div class="af-chat">
+                    <div class="af-bubble af-bubble--bot">What is the contact for the owner? This is usually an email address for the responsible person or team.</div>
+                    <div class="af-bubble af-bubble--user">"maritimexxx@customs.govt.nz"</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 6. Q: Course description -->
+              <div class="af-step">
+                <div class="af-left">
+                  <div class="af-node">
+                    <span class="af-tag af-tag--question">Question</span>
+                    <p class="af-node-title">Please describe the course.</p>
+                    <p class="af-node-detail">Will appear on the course page and in the Find Learning catalogue.</p>
+                    <span class="af-var">{x} CourseDescription | string</span>
+                  </div>
+                  <div class="af-connector"></div>
+                </div>
+                <div class="af-right">
+                  <div class="af-chat">
+                    <div class="af-bubble af-bubble--bot">Please describe the course. Briefly describe the purpose and what people will get from it.</div>
+                    <div class="af-bubble af-bubble--user">"The course will need to have resources, an interactive module and a knowledge check"</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 7. Q: Audience + Condition -->
+              <div class="af-step">
+                <div class="af-left">
+                  <div class="af-node">
+                    <span class="af-tag af-tag--question">Question</span>
+                    <p class="af-node-title">Who is the course for?</p>
+                    <p class="af-node-detail">Multiple choice: All of Customs / Specific work area or role</p>
+                    <span class="af-var">{x} CourseAudience | choice</span>
+                  </div>
+                  <div class="af-branch">
+                    <div class="af-node">
+                      <span class="af-tag af-tag--condition">Condition</span>
+                      <p class="af-node-title">= "Specific work area or role"</p>
+                    </div>
+                    <div class="af-node" style="margin-top:0.4rem;">
+                      <span class="af-tag af-tag--question">Question</span>
+                      <p class="af-node-title">Please specify work area or role:</p>
+                      <span class="af-var">{x} SpecificWorkArea | string</span>
+                    </div>
+                  </div>
+                  <div class="af-connector"></div>
+                </div>
+                <div class="af-right">
+                  <div class="af-chat">
+                    <div class="af-bubble af-bubble--bot">Who is the course for?</div>
+                    <div class="af-choices">
+                      <span class="af-choice-btn">All of Customs</span>
+                      <span class="af-choice-btn af-selected">Specific work area or role</span>
+                    </div>
+                    <div class="af-bubble af-bubble--bot">Please specify work area or role:</div>
+                    <div class="af-bubble af-bubble--user">"Maritime unit"</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 8. Q: Course needs -->
+              <div class="af-step">
+                <div class="af-left">
+                  <div class="af-node">
+                    <span class="af-tag af-tag--question">Question</span>
+                    <p class="af-node-title">What do you need from this course page?</p>
+                    <span class="af-var">{x} CourseNeeds | string</span>
+                  </div>
+                  <div class="af-connector"></div>
+                </div>
+                <div class="af-right">
+                  <div class="af-chat">
+                    <div class="af-bubble af-bubble--bot">What do you need from this course page?</div>
+                    <div class="af-bubble af-bubble--user">"I need it to have three sections tied to work area frameworks"</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 9. Q: Mandatory + Condition -->
+              <div class="af-step">
+                <div class="af-left">
+                  <div class="af-node">
+                    <span class="af-tag af-tag--question">Question</span>
+                    <p class="af-node-title">Will all items on the course page be mandatory?</p>
+                    <p class="af-node-detail">Multiple choice: Yes, everything is mandatory / No, some items are optional</p>
+                    <span class="af-var">{x} MandatoryItems | choice</span>
+                  </div>
+                  <div class="af-branch">
+                    <div class="af-node">
+                      <span class="af-tag af-tag--condition">Condition</span>
+                      <p class="af-node-title">= "No, some items are optional"</p>
+                    </div>
+                    <div class="af-node" style="margin-top:0.4rem;">
+                      <span class="af-tag af-tag--question">Question</span>
+                      <p class="af-node-title">Please specify which items are mandatory and which are optional:</p>
+                      <span class="af-var">{x} OptionalDetails | string</span>
+                    </div>
+                  </div>
+                  <div class="af-connector"></div>
+                </div>
+                <div class="af-right">
+                  <div class="af-chat">
+                    <div class="af-bubble af-bubble--bot">Will all items on the course page be mandatory?</div>
+                    <div class="af-choices">
+                      <span class="af-choice-btn">Yes, everything is mandatory</span>
+                      <span class="af-choice-btn af-selected">No, some items are optional</span>
+                    </div>
+                    <div class="af-bubble af-bubble--bot">Please specify which items are mandatory and which are optional:</div>
+                    <div class="af-bubble af-bubble--user">"Quiz will be mandatory, the rest is optional"</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 10. Q: Course image + Condition -->
+              <div class="af-step">
+                <div class="af-left">
+                  <div class="af-node">
+                    <span class="af-tag af-tag--question">Question</span>
+                    <p class="af-node-title">Do you have a course image to provide?</p>
+                    <p class="af-node-detail">Multiple choice: Yes / No</p>
+                    <span class="af-var">{x} CourseImageProvided | choice</span>
+                  </div>
+                  <div class="af-branch">
+                    <div class="af-node">
+                      <span class="af-tag af-tag--condition">Condition</span>
+                      <p class="af-node-title">= "Yes" → attach file</p>
+                      <span class="af-var">{x} CourseImageFile | file</span>
+                    </div>
+                  </div>
+                  <div class="af-connector"></div>
+                </div>
+                <div class="af-right">
+                  <div class="af-chat">
+                    <div class="af-bubble af-bubble--bot">Do you have a course image to provide?</div>
+                    <div class="af-choices">
+                      <span class="af-choice-btn af-selected">No</span>
+                      <span class="af-choice-btn">Yes</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 11. Action + Power Automate Flow -->
+              <div class="af-step">
+                <div class="af-left">
+                  <div class="af-node af-node--action">
+                    <span class="af-tag af-tag--action">Action</span>
+                    <p class="af-node-title">Calls: Outlook_flow</p>
+                    <p class="af-node-detail">10 variables passed to Power Automate:</p>
+                    <div class="af-flow-steps">
+                      <div class="af-flow-item"><span class="af-flow-icon">→</span><span>CourseName · CourseOwner · CourseContact · CourseDescription · CourseAudience · SpecificWorkArea · CourseNeeds · MandatoryItems · OptionalDetails · CourseImageProvided</span></div>
+                    </div>
+                  </div>
+                  <div class="af-branch">
+                    <div class="af-node af-node--flow">
+                      <span class="af-tag af-tag--flow">Power Automate</span>
+                      <p class="af-node-title">When an agent calls the flow</p>
+                      <div class="af-flow-steps">
+                        <div class="af-flow-item"><span class="af-flow-icon">✉</span><span>Send email (V1) to xxxx@customs.govt.nz - Subject: New Course Page Request. Body built with dynamic text from all variables.</span></div>
+                        <div class="af-flow-item"><span class="af-flow-icon">↩</span><span>Respond to agent - result: OK</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="af-connector"></div>
+                </div>
+                <div class="af-right">
+                  <div class="af-chat">
+                    <div class="af-processing">
+                      <span>Processing</span>
+                      <div class="af-dots">
+                        <div class="af-dot"></div>
+                        <div class="af-dot"></div>
+                        <div class="af-dot"></div>
+                      </div>
+                    </div>
+                    <div class="af-email-card">
+                      <p class="af-email-subject">📧 New Course Page Request</p>
+                      <p class="af-email-row"><strong>Course name:</strong> Maritime unit</p>
+                      <p class="af-email-row"><strong>Owner:</strong> Maritime unit team</p>
+                      <p class="af-email-row"><strong>Contact:</strong> maritimexxx@customs.govt.nz</p>
+                      <p class="af-email-row"><strong>For:</strong> Specific work area - Maritime unit</p>
+                      <p class="af-email-row"><strong>Completion:</strong> No, some items optional</p>
+                      <p class="af-email-row"><strong>Image provided:</strong> No</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 12. Message - Summary -->
+              <div class="af-step">
+                <div class="af-left">
+                  <div class="af-node">
+                    <span class="af-tag af-tag--message">Message</span>
+                    <p class="af-node-title">New Course Page Request - summary</p>
+                    <p class="af-node-detail">Displays all collected variables back to the user for confirmation.</p>
+                  </div>
+                  <div class="af-connector"></div>
+                </div>
+                <div class="af-right">
+                  <div class="af-chat">
+                    <div class="af-summary-card">
+                      <p class="af-summary-title">New Course Page Request</p>
+                      <p class="af-summary-row"><strong>Course name:</strong> Maritime unit</p>
+                      <p class="af-summary-row"><strong>Course owner:</strong> Maritime unit team</p>
+                      <p class="af-summary-row"><strong>Description:</strong> Resources, interactive module and a knowledge check</p>
+                      <p class="af-summary-row"><strong>Audience:</strong> Specific - Maritime unit</p>
+                      <p class="af-summary-row"><strong>Needs:</strong> Three sections tied to work area frameworks</p>
+                      <p class="af-summary-row"><strong>Completion:</strong> No, some optional - Quiz mandatory</p>
+                      <p class="af-summary-row"><strong>Image provided:</strong> No</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 13. Message - Thank you -->
+              <div class="af-step">
+                <div class="af-left">
+                  <div class="af-node">
+                    <span class="af-tag af-tag--message">Message</span>
+                    <p class="af-node-title">Thank you, you're all done!</p>
+                    <p class="af-node-detail">Confirmation message. Advises a Learning Room advisor will be in touch.</p>
+                  </div>
+                  <div class="af-connector"></div>
+                </div>
+                <div class="af-right">
+                  <div class="af-chat">
+                    <div class="af-bubble af-bubble--bot">Thank you, you're all done! I've sent your new course page request to the Learning Room team. A Learning Room advisor will be in touch to help you develop the course page. 🎉</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 14. Email received -->
+              <div class="af-step">
+                <div class="af-left">
+                  <div class="af-node af-node--email">
+                    <span class="af-tag af-tag--email">Outlook</span>
+                    <p class="af-node-title">Learning Room team receives email</p>
+                    <p class="af-node-detail">All entered data delivered to xxxx@customs.govt.nz - ready to action.</p>
+                  </div>
+                </div>
+                <div class="af-right">
+                  <div class="af-chat">
+                    <div class="af-email-card">
+                      <p class="af-email-subject">📬 Email delivered to Learning Room</p>
+                      <p class="af-email-row">The team receives a fully formatted request with all answers - no manual follow-up needed.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- .af-flow -->
+          </div><!-- .af-container -->
+        </section>
+
+        <section class="cs-section reveal">
+          <p class="cs-eyebrow">Final Product</p>
+          <div class="cs-section-split">
+            <h2>The agent in action</h2>
+            <div class="cs-prose">
+              <p>The finished agent deployed inside Microsoft Teams - ready for staff to use as the first point of contact for all new course page requests.</p>
+            </div>
+          </div>
+          <img src="assets/images/copilot-backend.png" alt="Copilot Studio - New Course page request topic and live test panel" style="width: 100%; display: block; margin-top: 3rem; border-radius: 12px;">
+          <img src="assets/images/copilot-email.png" alt="Outlook - New Course Page Request email received by the Learning Room team" style="width: 100%; display: block; margin-top: 1.5rem; border-radius: 12px;">
+        </section>
+
+        <section class="cs-section reveal">
+          <p class="cs-eyebrow">Impact</p>
+          <h2 class="ab-section-h2">Pioneering AI adoption across the organisation</h2>
+          <div class="cs-cards">
+            <article class="cs-card">
+              <h3>First of its kind</h3>
+              <p>This was the first AI agent deployed within the organisation's Microsoft environment, demonstrating a practical, low-risk application of emerging tools to a real team problem.</p>
+            </article>
+            <article class="cs-card">
+              <h3>Knowledge transfer</h3>
+              <p>To ensure the work had lasting value, I documented the entire build process and created cheatsheets and instructional videos so other staff could confidently build their own agents.</p>
+            </article>
+            <article class="cs-card">
+              <h3>Streamlined intake</h3>
+              <p>The agent replaced an inconsistent manual form, ensuring every request arrives with the right information - reducing turnaround time and freeing up the team administrator to focus on higher-value work.</p>
+            </article>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <footer class="site-footer cs-footer reveal">
+      <div>
+        <p class="eyebrow">Next project</p>
+        <a class="footer-link" href="sharesies-investing-101.html">Sharesies: Investing 101</a>
+      </div>
+      <div>
+        <p class="eyebrow">Contact</p>
+        <a class="footer-link" href="mailto:jan.svaty@gmail.com">jan.svaty@gmail.com</a>
+        <a class="footer-link" href="https://www.linkedin.com/in/jansvaty/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </footer>
+  </div>
+  <script>
+    (function () {
+      var steps = document.querySelectorAll('.af-step');
+      if (!steps.length || !window.IntersectionObserver) {
+        steps.forEach(function (s) { s.classList.add('af-visible'); });
+        return;
+      }
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('af-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      steps.forEach(function (s) { obs.observe(s); });
+    })();
+  </script>
+</body>
+</html>

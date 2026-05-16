@@ -27,7 +27,7 @@
     <main>
       <section class="cs-hero reveal">
         <div class="cs-hero-text">
-          <p class="cs-tag">Case Study — UX Research &amp; Design</p>
+          <p class="cs-tag">Case Study - UX Research &amp; Design</p>
           <h1 class="cs-title">Sharesies<br><em>Investing 101</em></h1>
           <div class="cs-meta" aria-label="Project details">
             <div class="cs-meta-row">
@@ -70,7 +70,7 @@
           <div class="cs-section-split">
             <h2>Focusing on the people Sharesies hadn't yet reached</h2>
             <div class="cs-prose">
-              <p>We began with desk research to build a foundation, then put people at the centre. My team interviewed 13 participants with diverse backgrounds, employment statuses, education levels, ages, and genders — all outside the Sharesies ecosystem — to gather unfiltered perspectives on how people think about investing.</p>
+              <p>We began with desk research to build a foundation, then put people at the centre. My team interviewed 13 participants with diverse backgrounds, employment statuses, education levels, ages, and genders - all outside the Sharesies ecosystem - to gather unfiltered perspectives on how people think about investing.</p>
               <p>The breadth of our participant group was deliberate. We wanted findings that reflected real variation in attitudes, not a narrow slice of the population. From those conversations we surfaced 32 findings and distilled them into 8 key insights.</p>
             </div>
           </div>
@@ -80,7 +80,7 @@
           <div class="cs-cards">
             <article class="cs-card">
               <h3>Who we spoke to</h3>
-              <p>13 participants across a range of ages, genders, employment statuses, and educational backgrounds — none of them active Sharesies users — giving us honest, unfiltered views on investing.</p>
+              <p>13 participants across a range of ages, genders, employment statuses, and educational backgrounds - none of them active Sharesies users - giving us honest, unfiltered views on investing.</p>
             </article>
             <article class="cs-card">
               <h3>What emerged</h3>
@@ -91,6 +91,7 @@
               <p>The research led to a clear how-might-we direction: help people overcome uncertainty and build enough confidence to take their first step into investing.</p>
             </article>
           </div>
+          <img src="assets/images/investing101-insights.png" alt="Strongest insights - independent research, human interaction, specific research, risk" style="width: 100%; display: block; margin-top: 3rem; border-radius: 12px;">
         </section>
 
         <section class="cs-section reveal">
@@ -109,7 +110,7 @@
                 <span class="cs-pill">Structured desktop concept</span>
                 <span class="cs-pill">Interactive mobile concept</span>
               </div>
-              <p>Concept testing with 4 participants revealed users wanted a combination of both, structured step-by-step content with interactive elements woven throughout.</p>
+              <p>Concept testing with 5 participants revealed users wanted a combination of both, structured step-by-step content with interactive elements woven throughout.</p>
             </div>
           </div>
           <div class="cs-quote">
@@ -122,7 +123,7 @@
           <div class="cs-section-split">
             <h2>Two rounds of testing, four key improvements</h2>
             <div class="cs-prose">
-              <p>Usability testing with 4 participants across two rounds led to targeted improvements: search bar added, step directory hierarchy clarified, reading time placement fixed, and quiz stats expanded.</p>
+              <p>Usability testing with 5 participants across two rounds led to targeted improvements: search bar added, step directory hierarchy clarified, reading time placement fixed, and quiz stats expanded.</p>
             </div>
           </div>
         </section>
@@ -146,8 +147,12 @@
             </div>
           </div>
         </div>
-        <img class="cs-solution-hero" src="assets/images/solution.png" alt="Investing Basics Mini Course — all screens">
-        <img class="cs-solution-hero" src="assets/images/solution2.png" alt="Investing Basics Mini Course — mobile screens">
+        <img class="cs-solution-hero" src="assets/images/solution.png" alt="Investing Basics Mini Course - all screens">
+        <img class="cs-solution-hero" src="assets/images/solution2.png" alt="Investing Basics Mini Course - mobile screens">
+        <button class="stake-ds-trigger" style="margin-top: 5rem;" data-src="assets/images/investing101-process-map.png" aria-label="View full process map">
+          <img src="assets/images/investing101-process-map.png" alt="Investing 101 full process map">
+          <span class="stake-ds-hint">Click to enlarge</span>
+        </button>
       </section>
 
       <div class="cs-body">
@@ -176,6 +181,15 @@
       </div>
     </main>
 
+    <!-- Lightbox -->
+    <div class="stake-lightbox" id="stakeLightbox" role="dialog" aria-modal="true" aria-label="Process map enlarged view">
+      <button class="stake-lightbox-close" id="stakeLightboxClose" aria-label="Close">&#x2715;</button>
+      <div class="stake-lightbox-inner" id="stakeLightboxInner">
+        <img class="stake-lightbox-img" id="stakeLightboxImg" src="" alt="Investing 101 process map enlarged">
+      </div>
+      <p class="stake-lightbox-hint">Scroll to zoom &nbsp;·&nbsp; Click outside to close</p>
+    </div>
+
     <footer class="site-footer cs-footer reveal">
       <div>
         <p class="eyebrow">Next project</p>
@@ -188,5 +202,48 @@
       </div>
     </footer>
   </div>
+
+  <script>
+    const trigger = document.querySelector('.stake-ds-trigger');
+    const lightbox = document.getElementById('stakeLightbox');
+    const lightboxImg = document.getElementById('stakeLightboxImg');
+    const lightboxInner = document.getElementById('stakeLightboxInner');
+    const closeBtn = document.getElementById('stakeLightboxClose');
+
+    let scale = 1;
+    const MIN = 1;
+    const MAX = 6;
+
+    function openLightbox() {
+      lightboxImg.src = trigger.dataset.src;
+      scale = 1;
+      lightboxImg.style.transform = 'scale(1)';
+      lightbox.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    trigger.addEventListener('click', openLightbox);
+    closeBtn.addEventListener('click', closeLightbox);
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox || e.target === lightboxInner) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    lightbox.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      scale -= e.deltaY * 0.002;
+      scale = Math.min(Math.max(scale, MIN), MAX);
+      lightboxImg.style.transform = `scale(${scale})`;
+    }, { passive: false });
+  </script>
 </body>
 </html>
