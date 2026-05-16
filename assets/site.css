@@ -146,8 +146,8 @@ h3 {
 .site-nav a,
 .nav-toggle {
   color: var(--muted);
-  width: 3.25rem;
-  height: 3.25rem;
+  width: 3.75rem;
+  height: 3.75rem;
   display: none;
   align-items: center;
   justify-content: center;
@@ -962,11 +962,8 @@ body.sharesies-page {
   }
 
   .home-header {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-  }
-
-  .home-header {
+    width: 100%;
+    margin-left: 0;
     padding-top: 0.8rem;
   }
 
