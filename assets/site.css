@@ -145,9 +145,13 @@ h3 {
 
 .site-nav a,
 .nav-toggle {
-  font-size: 0.95rem;
-  font-weight: 700;
   color: var(--muted);
+  width: 3.25rem;
+  height: 3.25rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .site-nav a:hover,
@@ -924,7 +928,7 @@ body.sharesies-page {
   }
 
   .nav-toggle {
-    display: inline-flex;
+    display: flex;
   }
 
   .site-nav {
@@ -951,11 +955,15 @@ body.sharesies-page {
     flex-direction: column;
   }
 
-  .home-header,
   .home-hero,
   .home-section-heading,
   .home-project-list {
     width: min(100% - 1.5rem, 1320px);
+  }
+
+  .home-header {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
   }
 
   .home-header {
