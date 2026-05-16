@@ -256,9 +256,13 @@
     .site-nav { display: flex !important; }
   }
   .mob-br { display: none; }
+  .title-mob { display: none; }
+  .title-desk { display: inline; }
   @media (max-width: 860px) {
     .mob-br { display: block; }
     .ab-section-h2 { white-space: normal; }
+    .title-mob { display: inline; }
+    .title-desk { display: none; }
   }
   </style>
 </head>
@@ -280,7 +284,7 @@
       <section class="cs-hero reveal">
         <div class="cs-hero-text">
           <p class="cs-tag">Case Study - AI &amp; Instructional Design</p>
-          <h1 class="cs-title">Power-<br class="mob-br">Automated<br><em style="color: #006E91;">AI Agent</em></h1>
+          <h1 class="cs-title"><span class="title-desk">PowerAutomated</span><span class="title-mob">Power-<br>Automated</span><br><em style="color: #006E91;">AI Agent</em></h1>
           <div class="cs-meta" aria-label="Project details">
             <div class="cs-meta-row">
               <span class="cs-meta-label">Role</span>
