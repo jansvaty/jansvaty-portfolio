@@ -255,6 +255,8 @@
   @media (min-width: 721px) {
     .site-nav { display: flex !important; }
   }
+  .mob-br { display: none; }
+  @media (max-width: 860px) { .mob-br { display: block; } }
   </style>
 </head>
 <body class="cs-editorial cs-copilot">
@@ -711,7 +713,7 @@
 
         <section class="cs-section reveal">
           <p class="cs-eyebrow">Impact</p>
-          <h2 class="ab-section-h2">Pioneering AI adoption across the organisation</h2>
+          <h2 class="ab-section-h2">Pioneering AI adoption<br class="mob-br"> across the organisation</h2>
           <div class="cs-cards">
             <article class="cs-card">
               <h3>First of its kind</h3>
