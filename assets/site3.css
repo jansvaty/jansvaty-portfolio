@@ -2132,7 +2132,7 @@ body.cs-editorial .ab-hero h1 {
 }
 
 .ab-hero-portrait img {
-  width: clamp(10rem, 15vw, 16rem);
+  width: clamp(7rem, 10vw, 11rem);
   border-radius: 1.5rem;
   display: block;
 }
