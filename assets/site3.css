@@ -2106,8 +2106,8 @@ body.home-page .hp-project h2 {
   padding-bottom: 5rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: clamp(2rem, 5vw, 5rem);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+  gap: clamp(3rem, 6vw, 6rem);
   align-items: center;
 }
 
@@ -2132,7 +2132,7 @@ body.cs-editorial .ab-hero h1 {
 }
 
 .ab-hero-portrait img {
-  width: clamp(7rem, 10vw, 11rem);
+  width: 100%;
   border-radius: 1.5rem;
   display: block;
 }
