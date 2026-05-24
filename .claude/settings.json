@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "REPO=\"/Users/jansvaty/Desktop/UoA Programming/industry-lab-01 2/src/Portfolio Website\" && cd \"$REPO\" && [ -n \"$(git status --porcelain)\" ] && git add -A && git commit -m \"Update portfolio\" && git push || true",
+            "statusMessage": "Committing and pushing changes..."
+          }
+        ]
+      }
+    ]
+  }
+}
