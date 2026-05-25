@@ -1341,6 +1341,16 @@ body.cs-editorial .button-outline:hover {
   align-content: start;
 }
 
+.cs-hmw {
+  font-size: 1.25em;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.35;
+  border-left: 3px solid currentColor;
+  padding-left: 1rem;
+  opacity: 0.85;
+}
+
 .cs-section > .cs-eyebrow {
   display: block;
   margin-bottom: 1rem;
