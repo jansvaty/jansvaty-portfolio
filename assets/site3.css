@@ -1656,10 +1656,6 @@ body.home-page .button-outline:hover {
   object-fit: cover;
 }
 
-.hp-hero-inner h1 {
-  max-width: none;
-}
-
 .hp-greeting {
   font-family: "DM Sans", sans-serif;
   font-size: clamp(1.6rem, 2.6vw, 2.1rem);
