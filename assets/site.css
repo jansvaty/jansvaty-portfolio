@@ -1133,19 +1133,19 @@ body.cs-editorial .site-nav a:not(.button-outline) {
 }
 
 body.cs-editorial .site-nav a:not(.button-outline):hover {
-  color: #006E91;
+  color: #015f7d;
 }
 
 body.cs-editorial .button-outline {
-  border-color: #006E91;
-  color: #006E91;
+  border-color: #015f7d;
+  color: #015f7d;
   min-height: 2.75rem;
   padding-inline: 1.4rem;
   font-size: 0.88rem;
 }
 
 body.cs-editorial .button-outline:hover {
-  background: #006E91;
+  background: #015f7d;
   color: #fff;
 }
 
@@ -1527,7 +1527,7 @@ body.cs-editorial .button-outline:hover {
 }
 
 .cs-footer .footer-link {
-  color: #006E91;
+  color: #015f7d;
   font-family: "DM Sans", sans-serif;
   font-weight: 600;
   font-size: 0.95rem;
@@ -1611,12 +1611,12 @@ body.home-page .site-nav a:not(.button-outline) {
 }
 
 body.home-page .site-nav a:not(.button-outline):hover {
-  color: #006E91;
+  color: #015f7d;
 }
 
 body.home-page .button-outline {
-  border-color: #006E91;
-  color: #006E91;
+  border-color: #015f7d;
+  color: #015f7d;
   min-height: 2.75rem;
   padding-inline: 1.4rem;
   font-size: 0.88rem;
@@ -1624,7 +1624,7 @@ body.home-page .button-outline {
 }
 
 body.home-page .button-outline:hover {
-  background: #006E91;
+  background: #015f7d;
   color: #fff;
 }
 
@@ -1673,7 +1673,7 @@ body.home-page h1 {
 
 body.home-page h1 em {
   font-style: italic;
-  color: #006E91;
+  color: #015f7d;
 }
 
 .hp-wave {
@@ -1711,7 +1711,7 @@ body.home-page h1 em {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #006E91;
+  color: #015f7d;
   margin: 0 0 1.5rem;
 }
 
@@ -1764,7 +1764,7 @@ body.home-page .hp-project h2 {
   font-family: "DM Sans", sans-serif;
   font-size: 1.05rem;
   font-weight: 600;
-  color: #006E91;
+  color: #015f7d;
   text-decoration: none;
   transition: color 180ms ease;
 }
@@ -1914,7 +1914,7 @@ body.home-page .hp-project h2 {
   font-weight: 500;
   margin: 0;
   width: fit-content;
-  border: 1.5px solid #006E91;
+  border: 1.5px solid #015f7d;
   border-radius: 999px;
   padding: 0.2rem 0.75rem;
   display: inline-block;
@@ -1932,7 +1932,7 @@ body.home-page .hp-project h2 {
 }
 
 .hp-footer-link:hover {
-  color: #006E91;
+  color: #015f7d;
 }
 
 @media (max-width: 860px) {
@@ -2087,7 +2087,7 @@ body.home-page .hp-project h2 {
   font-family: "DM Sans", sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
-  color: #006E91;
+  color: #015f7d;
   text-decoration: none;
   transition: color 180ms ease;
 }
