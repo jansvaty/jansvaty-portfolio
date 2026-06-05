@@ -1,3 +1,13 @@
+// Intro overlay — plays once per session
+const introOverlay = document.getElementById('intro-overlay');
+if (introOverlay && !document.documentElement.classList.contains('intro-skip')) {
+  sessionStorage.setItem('js_intro', '1');
+  setTimeout(() => {
+    introOverlay.classList.add('is-leaving');
+    introOverlay.addEventListener('animationend', () => introOverlay.remove(), { once: true });
+  }, 1700);
+}
+
 const navToggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".site-nav");
 

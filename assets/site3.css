@@ -2258,3 +2258,59 @@ body.cs-editorial .ab-section-h2 {
     white-space: normal;
   }
 }
+
+/* ─── Intro animation ─────────────────────────── */
+
+html.intro-skip .intro-overlay {
+  display: none;
+}
+
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #1c1c1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-overlay.is-leaving {
+  animation: intro-exit 0.8s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+.intro-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.9;
+}
+
+.intro-clip {
+  overflow: hidden;
+  padding-bottom: 0.06em;
+}
+
+.intro-word {
+  display: block;
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(5rem, 20vw, 17rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  color: #fff;
+  transform: translateY(110%);
+  opacity: 0;
+  animation: intro-word-in 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes intro-word-in {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes intro-exit {
+  to {
+    transform: translateY(-100%);
+  }
+}
