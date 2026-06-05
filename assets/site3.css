@@ -1414,6 +1414,19 @@ body.cs-editorial .button-outline:hover {
   display: block;
 }
 
+.cs-image-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.cs-image-row .cs-img {
+  flex: 1 1 0;
+  width: 0;
+  border-radius: 1.25rem;
+  object-fit: contain;
+}
+
 /* Spacing when quote or cards follow a split block */
 .cs-section-split + .cs-quote {
   margin-top: 3rem;
