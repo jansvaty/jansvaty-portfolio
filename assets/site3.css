@@ -1416,13 +1416,13 @@ body.cs-editorial .button-outline:hover {
 
 .cs-image-row {
   display: flex;
-  gap: 1rem;
+  gap: clamp(2.5rem, 5vw, 5rem);
   margin-top: 2.5rem;
-  justify-content: flex-start;
 }
 
 .cs-image-row .cs-img {
-  width: 280px;
+  flex: 1 1 0;
+  width: 0;
   height: auto;
   border-radius: 0.75rem;
   object-fit: contain;
