@@ -1,7 +1,6 @@
-// Intro overlay — plays once per session
+// Intro overlay — plays on every visit
 const introOverlay = document.getElementById('intro-overlay');
-if (introOverlay && !document.documentElement.classList.contains('intro-skip')) {
-  sessionStorage.setItem('js_intro', '1');
+if (introOverlay) {
   setTimeout(() => {
     introOverlay.classList.add('is-leaving');
     introOverlay.addEventListener('animationend', () => introOverlay.remove(), { once: true });
