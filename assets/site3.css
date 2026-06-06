@@ -2276,15 +2276,15 @@ html.intro-skip .intro-overlay {
 }
 
 .intro-overlay.is-leaving {
-  animation: intro-exit 0.7s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  animation: intro-exit 1s ease-in forwards;
 }
 
 .intro-logo {
   width: clamp(8rem, 22vw, 18rem);
   height: auto;
   opacity: 0;
-  transform: scale(0.82);
-  animation: intro-logo-in 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+  transform: scale(0.94);
+  animation: intro-logo-in 1.4s ease-out 0.3s both;
 }
 
 @keyframes intro-logo-in {
