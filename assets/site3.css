@@ -1,14 +1,14 @@
 :root {
-  --bg: #f4efe8;
-  --panel: rgba(255, 255, 255, 0.62);
-  --panel-strong: #fffaf5;
-  --text: #1d1a18;
-  --muted: #5f5650;
-  --line: rgba(29, 26, 24, 0.12);
+  --bg: #1a1a1a;
+  --panel: rgba(255, 255, 255, 0.05);
+  --panel-strong: #252525;
+  --text: #e8e8e8;
+  --muted: #9a9a9a;
+  --line: rgba(255, 255, 255, 0.1);
   --accent: #c95d3d;
-  --accent-strong: #a94325;
-  --accent-soft: #f0d7ca;
-  --shadow: 0 24px 60px rgba(41, 22, 12, 0.08);
+  --accent-strong: #e06a45;
+  --accent-soft: #3a2018;
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
   --radius: 28px;
   --ink-dark: #202126;
   --ink-soft: #3d4048;
@@ -32,14 +32,11 @@ body {
   margin: 0;
   color: var(--text);
   font-family: "Manrope", sans-serif;
-  background:
-    radial-gradient(circle at top left, rgba(201, 93, 61, 0.16), transparent 30%),
-    radial-gradient(circle at top right, rgba(35, 118, 120, 0.1), transparent 24%),
-    linear-gradient(180deg, #fcf8f1 0%, var(--bg) 100%);
+  background: #1a1a1a;
 }
 
 body.home-page {
-  background: #fcfbfa;
+  background: #1a1a1a;
 }
 
 img {
@@ -123,10 +120,10 @@ h3 {
   width: 100vw;
   margin-left: calc(50% - 50vw);
   padding: 0.7rem 2rem;
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(26, 26, 26, 0.96);
   backdrop-filter: blur(14px);
   border: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 0;
   box-shadow: none;
   margin-bottom: 0;
@@ -445,6 +442,7 @@ h3 {
   width: 3rem;
   height: auto;
   object-fit: contain;
+  filter: invert(1);
 }
 
 
@@ -1075,14 +1073,14 @@ body.sharesies-page {
 /* ─── Editorial case study layout ─────────────────────────── */
 
 body.cs-editorial {
-  background: #fff;
-  color: #1c1c1c;
+  background: #1a1a1a;
+  color: #e8e8e8;
   font-family: "DM Sans", sans-serif;
 }
 
 body.cs-editorial p {
   font-family: "DM Sans", sans-serif;
-  color: #555;
+  color: #9a9a9a;
   line-height: 1.75;
 }
 
@@ -1099,19 +1097,19 @@ body.cs-editorial h4 {
 body.cs-editorial h1 {
   font-size: clamp(3.4rem, 7vw, 5.5rem);
   max-width: 10ch;
-  color: #1c1c1c;
+  color: #e8e8e8;
 }
 
 body.cs-editorial h2 {
   font-size: clamp(2rem, 3.5vw, 2.75rem);
   max-width: 24ch;
-  color: #1c1c1c;
+  color: #e8e8e8;
   white-space: normal;
 }
 
 body.cs-editorial h3 {
   font-size: 1.15rem;
-  color: #1c1c1c;
+  color: #e8e8e8;
 }
 
 .cs-shell {
@@ -1125,17 +1123,18 @@ body.cs-editorial .brand img {
   width: 3rem;
   height: auto;
   object-fit: contain;
+  filter: invert(1);
 }
 
 body.cs-editorial .site-nav a:not(.button-outline) {
-  color: #555;
+  color: #aaa;
   font-weight: 600;
   text-transform: none;
   letter-spacing: 0;
 }
 
 body.cs-editorial .site-nav a:not(.button-outline):hover {
-  color: #015f7d;
+  color: #e8e8e8;
 }
 
 body.cs-editorial .button-outline {
@@ -1182,7 +1181,7 @@ body.cs-editorial .button-outline:hover {
   gap: clamp(3rem, 6vw, 6rem);
   align-items: center;
   padding-bottom: 5rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .cs-hero-text {
@@ -1196,7 +1195,7 @@ body.cs-editorial .button-outline:hover {
   line-height: 1.0;
   letter-spacing: -0.03em;
   margin: 0;
-  color: #1c1c1c;
+  color: #e8e8e8;
   font-weight: 400;
   max-width: 10ch;
 }
@@ -1223,7 +1222,7 @@ body.cs-editorial .button-outline:hover {
 
 .cs-meta {
   padding-top: 1.75rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   display: grid;
   gap: 0.7rem;
 }
@@ -1249,7 +1248,7 @@ body.cs-editorial .button-outline:hover {
   font-family: "DM Sans", sans-serif;
   font-size: 0.88rem;
   font-weight: 500;
-  color: #444;
+  color: #bbb;
   line-height: 1.45;
   margin: 0;
 }
@@ -1321,7 +1320,7 @@ body.cs-editorial .button-outline:hover {
 /* Sections */
 .cs-section {
   padding: 5rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .cs-section-head {
@@ -1346,9 +1345,9 @@ body.cs-editorial .button-outline:hover {
   font-weight: 700;
   font-style: italic;
   line-height: 1.4;
-  color: #015f7d;
-  background: #f0f9fc;
-  border-left: 4px solid #015f7d;
+  color: #4db6d6;
+  background: #1a2a30;
+  border-left: 4px solid #4db6d6;
   border-radius: 0 0.5rem 0.5rem 0;
   padding: 1rem 1.25rem;
   margin: 0.5rem 0;
@@ -1370,7 +1369,7 @@ body.cs-editorial .button-outline:hover {
   margin-top: 2rem;
   font-size: 1.15rem;
   line-height: 1.6;
-  color: #444;
+  color: #9a9a9a;
   max-width: 72ch;
 }
 
@@ -1384,11 +1383,11 @@ body.cs-editorial .button-outline:hover {
 
 .cs-card {
   padding: 1.5rem 1.25rem;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 0.75rem;
   display: grid;
   gap: 0.65rem;
-  background: #fafafa;
+  background: #252525;
 }
 
 .cs-card h3 {
@@ -1398,7 +1397,7 @@ body.cs-editorial .button-outline:hover {
 .cs-card p {
   font-size: 0.88rem;
   line-height: 1.68;
-  color: #666;
+  color: #9a9a9a;
 }
 
 /* Image break */
@@ -1442,7 +1441,7 @@ body.cs-editorial .button-outline:hover {
   border-left: 3px solid #D4537E;
   padding: 1rem 1.5rem;
   margin: 1.5rem 0;
-  background: #fafafa;
+  background: #252525;
   border-radius: 0 8px 8px 0;
 }
 
@@ -1452,7 +1451,7 @@ body.cs-editorial .button-outline:hover {
   line-height: 1.4;
   margin: 0;
   font-style: italic;
-  color: #1c1c1c;
+  color: #e8e8e8;
 }
 
 /* Pills */
@@ -1467,8 +1466,8 @@ body.cs-editorial .button-outline:hover {
   font-size: 12px;
   padding: 4px 12px;
   border-radius: 100px;
-  background: #FBEAF0;
-  color: #993556;
+  background: #3a1a24;
+  color: #e0748e;
   font-weight: 500;
   font-family: "DM Sans", sans-serif;
 }
@@ -1476,7 +1475,7 @@ body.cs-editorial .button-outline:hover {
 /* Solution section — text constrained, images full width */
 .cs-solution-section {
   padding: 5rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .cs-solution-text {
@@ -1517,7 +1516,7 @@ body.cs-editorial .button-outline:hover {
 }
 
 .cs-reflection-card {
-  background: #fafafa;
+  background: #252525;
   border-radius: 12px;
   padding: 1.5rem 1.25rem;
   display: grid;
@@ -1531,7 +1530,7 @@ body.cs-editorial .button-outline:hover {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #666;
+  color: #9a9a9a;
   margin: 0 0 0.5rem;
   line-height: 1;
 }
@@ -1539,7 +1538,7 @@ body.cs-editorial .button-outline:hover {
 .cs-reflection-card p {
   font-size: 0.9rem;
   line-height: 1.6;
-  color: #555;
+  color: #9a9a9a;
   margin: 0;
   font-family: "DM Sans", sans-serif;
 }
@@ -1551,27 +1550,27 @@ body.cs-editorial .button-outline:hover {
   padding: 2rem 0 3rem;
   background: transparent;
   border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 0;
   box-shadow: none;
   backdrop-filter: none;
 }
 
 .cs-footer .eyebrow {
-  color: #bbb;
+  color: #606060;
   font-family: "DM Sans", sans-serif;
   font-size: 0.7rem;
 }
 
 .cs-footer .footer-link {
-  color: #015f7d;
+  color: #4db6d6;
   font-family: "DM Sans", sans-serif;
   font-weight: 600;
   font-size: 0.95rem;
 }
 
 .cs-footer .footer-link:hover {
-  color: #b03562;
+  color: #e8e8e8;
 }
 
 @media (max-width: 860px) {
@@ -1621,7 +1620,7 @@ body.cs-editorial .button-outline:hover {
 /* ─── Home page redesign ─────────────────────────── */
 
 body.home-page {
-  background: #fff;
+  background: #1a1a1a;
   font-family: "DM Sans", sans-serif;
 }
 
@@ -1640,7 +1639,7 @@ body.home-page h3 {
 
 
 body.home-page .site-nav a:not(.button-outline) {
-  color: #555;
+  color: #aaa;
   font-weight: 600;
   text-transform: none;
   letter-spacing: 0;
@@ -1648,7 +1647,7 @@ body.home-page .site-nav a:not(.button-outline) {
 }
 
 body.home-page .site-nav a:not(.button-outline):hover {
-  color: #015f7d;
+  color: #e8e8e8;
 }
 
 body.home-page .button-outline {
@@ -1670,7 +1669,7 @@ body.home-page .button-outline:hover {
   width: min(1200px, calc(100% - 4rem));
   margin: 5rem auto 0;
   padding-bottom: 5rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(3rem, 6vw, 5rem);
@@ -1694,7 +1693,7 @@ body.home-page .button-outline:hover {
 .hp-greeting {
   font-family: "DM Sans", sans-serif;
   font-size: clamp(1.6rem, 2.6vw, 2.1rem);
-  color: #555;
+  color: #9a9a9a;
   margin: 0 0 0.5rem;
   line-height: 1.4;
 }
@@ -1704,13 +1703,13 @@ body.home-page h1 {
   line-height: 1.05;
   letter-spacing: -0.03em;
   max-width: none;
-  color: #1c1c1c;
+  color: #e8e8e8;
   margin: 0;
 }
 
 body.home-page h1 em {
   font-style: italic;
-  color: #015f7d;
+  color: #4db6d6;
 }
 
 .hp-wave {
@@ -1782,14 +1781,14 @@ body.home-page h1 em {
 
 body.home-page .hp-project h2 {
   font-size: clamp(1.75rem, 3vw, 2.5rem);
-  color: #1c1c1c;
+  color: #e8e8e8;
   max-width: none;
 }
 
 .hp-project > .hp-project-info p {
   font-size: 1rem;
   line-height: 1.72;
-  color: #555;
+  color: #9a9a9a;
   margin: 0;
   max-width: 46ch;
 }
@@ -1801,7 +1800,7 @@ body.home-page .hp-project h2 {
   font-family: "DM Sans", sans-serif;
   font-size: 1.05rem;
   font-weight: 600;
-  color: #015f7d;
+  color: #4db6d6;
   text-decoration: none;
   transition: color 180ms ease;
 }
@@ -1811,7 +1810,7 @@ body.home-page .hp-project h2 {
 }
 
 .hp-link:hover {
-  color: #b03562;
+  color: #e8e8e8;
 }
 
 .hp-customs-links {
@@ -1825,7 +1824,7 @@ body.home-page .hp-project h2 {
   justify-content: space-between;
   gap: 1rem;
   padding: 0.85rem 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0.6rem;
 }
 
@@ -1833,7 +1832,7 @@ body.home-page .hp-project h2 {
   font-family: "DM Sans", sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
-  color: #1c1c1c;
+  color: #e8e8e8;
 }
 
 .hp-customs-row .hp-link::after {
@@ -1849,7 +1848,7 @@ body.home-page .hp-project h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f5f5f5;
+  background: #252525;
   border-radius: 1.5rem;
   padding: 2rem;
   min-height: 22rem;
@@ -1857,7 +1856,7 @@ body.home-page .hp-project h2 {
 }
 
 .hp-project-visual:hover {
-  background: #eee;
+  background: #303030;
 }
 
 .hp-project-visual img {
@@ -1880,7 +1879,7 @@ body.home-page .hp-project h2 {
 
 .hp-divider {
   border: none;
-  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   margin: 0;
 }
 
@@ -1889,7 +1888,7 @@ body.home-page .hp-project h2 {
   width: min(1200px, calc(100% - 4rem));
   margin: 0 auto;
   padding: 2.5rem 0 3.5rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   background: transparent;
   border-left: 0;
   border-right: 0;
@@ -1947,11 +1946,11 @@ body.home-page .hp-project h2 {
 .hp-location-current {
   font-family: "DM Sans", sans-serif;
   font-size: 0.85rem;
-  color: #1c1c1c;
+  color: #e8e8e8;
   font-weight: 500;
   margin: 0;
   width: fit-content;
-  border: 1.5px solid #015f7d;
+  border: 1.5px solid #4db6d6;
   border-radius: 999px;
   padding: 0.2rem 0.75rem;
   display: inline-block;
@@ -1961,7 +1960,7 @@ body.home-page .hp-project h2 {
 .hp-footer-link {
   font-family: "DM Sans", sans-serif;
   font-size: 0.9rem;
-  color: #444;
+  color: #bbb;
   font-weight: 500;
   text-decoration: none;
   line-height: 1.5;
@@ -1969,7 +1968,7 @@ body.home-page .hp-project h2 {
 }
 
 .hp-footer-link:hover {
-  color: #015f7d;
+  color: #e8e8e8;
 }
 
 @media (max-width: 860px) {
@@ -2139,7 +2138,7 @@ body.home-page .hp-project h2 {
   width: min(1200px, calc(100% - 4rem));
   margin: 4rem auto 0;
   padding-bottom: 5rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 0.5fr);
   gap: clamp(3rem, 6vw, 6rem);
@@ -2161,7 +2160,7 @@ body.cs-editorial .ab-hero h1 {
   font-family: "DM Sans", sans-serif;
   font-size: 1.25rem;
   line-height: 1.72;
-  color: #555;
+  color: #9a9a9a;
   max-width: none;
   margin: 0;
 }
@@ -2188,7 +2187,7 @@ body.cs-editorial .ab-section-h2 {
 .cs-card li {
   font-size: 0.88rem;
   line-height: 1.6;
-  color: #555;
+  color: #9a9a9a;
   font-family: "DM Sans", sans-serif;
 }
 
@@ -2202,14 +2201,14 @@ body.cs-editorial .ab-section-h2 {
   display: grid;
   gap: 0.3rem;
   padding: 1.25rem;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 0.75rem;
-  background: #fafafa;
+  background: #252525;
 }
 
 .ab-timeline-item h3 {
   font-size: 1rem;
-  color: #1c1c1c;
+  color: #e8e8e8;
   font-family: "DM Serif Display", serif;
   font-weight: 400;
   letter-spacing: -0.01em;
@@ -2281,6 +2280,7 @@ body.cs-editorial .ab-section-h2 {
   opacity: 0;
   transform: scale(0.94);
   animation: intro-logo-in 1.4s ease-out 0.3s both;
+  mix-blend-mode: multiply;
 }
 
 @keyframes intro-logo-in {
