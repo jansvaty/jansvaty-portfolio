@@ -2262,6 +2262,10 @@ body.cs-editorial .ab-section-h2 {
 
 /* ─── Intro animation ─────────────────────────── */
 
+html.intro-skip .intro-overlay {
+  display: none;
+}
+
 .intro-overlay {
   position: fixed;
   inset: 0;
