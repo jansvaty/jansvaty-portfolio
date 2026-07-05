@@ -2628,5 +2628,6 @@ html.intro-skip .intro-overlay {
 }
 
 [data-theme="dark"] .cs-blend-img {
-  mix-blend-mode: multiply;
+  filter: invert(0.88) hue-rotate(180deg);
+  border-radius: 1.25rem;
 }
