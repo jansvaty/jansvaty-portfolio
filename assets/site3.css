@@ -2628,11 +2628,7 @@ html.intro-skip .intro-overlay {
 }
 
 .hp-hero-accent {
-  color: #015f7d;
-}
-
-[data-theme="dark"] .hp-hero-accent {
-  color: #7ab8d4;
+  color: var(--home-blue);
 }
 
 [data-theme="dark"] .cs-blend-img {
