@@ -2627,6 +2627,14 @@ html.intro-skip .intro-overlay {
   border-color: #6b9fd4;
 }
 
+.hp-hero-accent {
+  color: #015f7d;
+}
+
+[data-theme="dark"] .hp-hero-accent {
+  color: #7ab8d4;
+}
+
 [data-theme="dark"] .cs-blend-img {
   filter: invert(0.88) hue-rotate(180deg);
   border-radius: 1.25rem;
