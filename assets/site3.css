@@ -2437,3 +2437,26 @@ html.intro-skip .intro-overlay {
 [data-theme="dark"] .theme-toggle .icon-moon {
   display: none;
 }
+
+/* cs-editorial dark mode nav + eyebrow fixes (hardcoded light-only values) */
+[data-theme="dark"] body.cs-editorial .site-nav a:not(.button-outline) {
+  color: var(--muted);
+}
+
+[data-theme="dark"] body.cs-editorial .site-nav a:not(.button-outline):hover {
+  color: #7ab8d4;
+}
+
+[data-theme="dark"] body.cs-editorial .button-outline {
+  border-color: #6b9fd4;
+  color: #6b9fd4;
+}
+
+[data-theme="dark"] body.cs-editorial .button-outline:hover {
+  background: #6b9fd4;
+  color: #fff;
+}
+
+[data-theme="dark"] .cs-eyebrow {
+  color: #e05880;
+}
