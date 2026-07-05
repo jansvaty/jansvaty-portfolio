@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script>if(sessionStorage.getItem('js_intro'))document.documentElement.className+=' intro-skip';</script>
+  <script>if(sessionStorage.getItem('js_intro'))document.documentElement.className+=' intro-skip';var _t=localStorage.getItem('theme');if(_t)document.documentElement.setAttribute('data-theme',_t);</script>
   <title>Jan Svaty | Portfolio</title>
   <meta name="description" content="Jan Svaty is a Product Designer with a Master of UX Design and 10+ years of experience. Based between New Zealand and Australia, specialising in human-centred design, AI-driven experiences, and turning complex problems into intuitive digital products.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/site3.css?v=13">
-  <script src="assets/site.js?v=7" defer></script>
+  <link rel="stylesheet" href="assets/site3.css?v=14">
+  <script src="assets/site.js?v=8" defer></script>
 </head>
 <body class="home-page">
   <div class="intro-overlay" id="intro-overlay" aria-hidden="true">
@@ -26,6 +26,7 @@
         <a href="about.html">About</a>
         <a href="https://www.linkedin.com/in/jansvaty/" target="_blank" rel="noreferrer">LinkedIn</a>
         <a class="button button-outline" href="contact.html">Contact me</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode"><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/></svg><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="5" fill="currentColor"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
       </nav>
     </header>
 
