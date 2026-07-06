@@ -2243,6 +2243,10 @@ body.cs-editorial .ab-section-h2 {
   font-family: "DM Sans", sans-serif;
 }
 
+[data-theme="dark"] .ab-timeline-item h3 {
+  color: #1c1c1c;
+}
+
 @media (max-width: 860px) {
   .ab-hero {
     grid-template-columns: 1fr;
