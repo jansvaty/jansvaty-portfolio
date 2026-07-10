@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>var _t=localStorage.getItem("theme");if(_t)document.documentElement.setAttribute("data-theme",_t);</script>
+  <title>Kiwi Compass | Jan Svaty</title>
+  <meta name="description" content="Kiwi Compass is a city-matching web app for New Zealanders moving to Australia - designed, built and shipped end-to-end by Jan Svaty.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site3.css?v=24">
+  <script src="assets/site.js?v=8" defer></script>
+</head>
+<body class="cs-editorial cs-kiwi-compass">
+  <div class="site-shell cs-shell">
+    <header class="site-header">
+      <a class="brand home-brand" href="index.html" aria-label="Jan Svaty home">
+        <img src="assets/images/logo-mark.png" alt="Jan Svaty logo">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect y="5" width="24" height="2.5" rx="1.25" fill="currentColor"/><rect y="11" width="24" height="2.5" rx="1.25" fill="currentColor"/><rect y="17" width="24" height="2.5" rx="1.25" fill="currentColor"/></svg></button>
+      <nav id="site-nav" class="site-nav">
+        <a href="about.html">About</a>
+        <a href="https://www.linkedin.com/in/jansvaty/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="button button-outline" href="contact.html">Contact me</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode"><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/></svg><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="5" fill="currentColor"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="cs-hero reveal">
+        <div class="cs-hero-text">
+          <p class="cs-tag">Case Study - Product Design &amp; Build</p>
+          <h1 class="cs-title">Kiwi<br><em style="color: #346eaa;">Compass</em></h1>
+          <div class="cs-meta" aria-label="Project details">
+            <div class="cs-meta-row">
+              <span class="cs-meta-label">Role</span>
+              <p class="cs-meta-value">Product design, data model, front-end build, brand</p>
+            </div>
+            <div class="cs-meta-row">
+              <span class="cs-meta-label">Client</span>
+              <p class="cs-meta-value">Personal project</p>
+            </div>
+            <div class="cs-meta-row">
+              <span class="cs-meta-label">Deliverables</span>
+              <p class="cs-meta-value">Installable web app (PWA), 12-factor matching engine, brand identity</p>
+            </div>
+            <div class="cs-meta-row">
+              <span class="cs-meta-label">Year</span>
+              <p class="cs-meta-value">2026</p>
+            </div>
+          </div>
+        </div>
+        <div class="cs-hero-image">
+          <img src="assets/images/home-kiwi-compass.svg" alt="Kiwi Compass results screen: a radar graph comparing the user's priorities with Melbourne's fit across ten factors">
+        </div>
+      </section>
+
+      <div class="cs-body">
+
+        <section class="cs-section reveal">
+          <p class="cs-eyebrow">Overview</p>
+          <div class="cs-section-split">
+            <h2>Which Australian city should a Kiwi actually move to?</h2>
+            <div class="cs-prose">
+              <p>Around 700,000 New Zealanders live in Australia, and thousands more make the move every year. Most pick their city on hearsay: a cousin in Brisbane, a forum thread, a friend's opinion of a place they visited once. It is a stressful, life-sized decision made with weekend-trip information.</p>
+              <p>I know the feeling first-hand. I have chosen a new city with a blank sheet more than once - Prague to British Columbia, Montreal, Calgary, Puerto Escondido, Auckland, Wellington - and I always wished a tool existed that would take my actual life and compare it against real data. So I designed and built one, end-to-end: research, data model, interface, brand, code and deployment.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="cs-section reveal">
+          <p class="cs-eyebrow">How it works</p>
+          <h2 class="ab-section-h2">Nine questions, your own weighting, a transparent answer</h2>
+          <div class="cs-cards">
+            <article class="cs-card">
+              <h3>Who you are, not who's average</h3>
+              <p>Field of work, hobbies, weather preference, how you commute, where you holiday, social life, who's coming with you, the plan, and a rent-or-buy budget slider. Conditional factors - kids, pets, dating - only switch on when they apply.</p>
+            </article>
+            <article class="cs-card">
+              <h3>You set the weights</h3>
+              <p>Before the results, a slider screen asks how much each factor matters, from 0 to 10. The sliders are the scoring model: a factor at zero is removed from the maths entirely. No hidden weighting decides for you.</p>
+            </article>
+            <article class="cs-card">
+              <h3>Reasoning, not a black box</h3>
+              <p>Twelve Australian cities are ranked by percentage match, and every factor of every city explains its score in plain English - with a link to the official source behind it: ABS Census, ABS labour statistics, BOM climate data, BITRE aviation routes, Home Affairs.</p>
+            </article>
+            <article class="cs-card">
+              <h3>The radar moment</h3>
+              <p>Results open with a radar graph: your priorities as a filled shape, your best-matched city's fit as a dashed overlay. Wherever the dashed line dips inside your shape, the city under-delivers on something you care about. The chart explains the ranking at a glance.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="cs-section reveal">
+          <p class="cs-eyebrow">Design decisions</p>
+          <div class="cs-section-split">
+            <h2>Honesty as a design principle</h2>
+            <div class="cs-prose">
+              <p>Relocation tools tend to oversell certainty. Kiwi Compass does the opposite. The dataset is labelled as an indicative snapshot compiled from official sources, not live statistics. The home page carries a plain disclaimer: the results are <em>a hint, not a guarantee</em> - if you already have a job or family waiting, you will be happiest where they are.</p>
+              <p>The same honesty shapes the scoring. The citizenship question was a trap worth avoiding: the four-year direct pathway for NZ citizens is national law, identical in every city. Instead of implying Brisbane grants citizenship faster than Perth, the app scores cities on how easily you can build the stable base behind the pathway, and says so.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="cs-section reveal">
+          <p class="cs-eyebrow">Craft</p>
+          <h2 class="ab-section-h2">Accessible, installable, flag-coloured</h2>
+          <div class="cs-cards">
+            <article class="cs-card">
+              <h3>WCAG AA inside a brand constraint</h3>
+              <p>The palette comes from the two flags: #346EAA blue, #E13940 red, white and black. The red measures 4.3:1 on white - just under the AA threshold for body text - so it is reserved for large text and graphics, while blue carries every text-and-UI role at 5.3:1+. Selection states pair colour with check marks, focus is managed across the step flow, and every toggle announces its state.</p>
+            </article>
+            <article class="cs-card">
+              <h3>Dark by default, light by choice</h3>
+              <p>The app opens in a true-black dark theme with a persistent sun/moon toggle. The flag blue fails contrast on black, so dark mode lifts it to a compliant tint of the same hue - the kind of detail a palette swap gets wrong by default.</p>
+            </article>
+            <article class="cs-card">
+              <h3>A web app that installs like a native one</h3>
+              <p>Built as a dependency-free progressive web app: no framework, no build step, offline-capable via a service worker, installable from Safari to an iPhone home screen with its own compass icon - the needle points north-west, the heading from New Zealand to Australia.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="cs-section reveal">
+          <p class="cs-eyebrow">Outcome</p>
+          <div class="cs-section-split">
+            <h2>From blank sheet to shipped product</h2>
+            <div class="cs-prose">
+              <p>Kiwi Compass went from idea to a deployed, installable product: a nine-step questionnaire, a self-weighted twelve-factor matching engine covering twelve cities, a radar visualisation, and a data model with a documented source for every figure. The next step on the roadmap is refreshing the dataset automatically from the ABS Data API, keeping the client static and fast.</p>
+              <p><a href="https://kiwicompass.jansvaty.com" target="_blank" rel="noreferrer">Try the live app</a> or <a href="https://github.com/jansvaty/kiwi-compass" target="_blank" rel="noreferrer">read the code on GitHub</a>.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <footer class="site-footer cs-footer reveal">
+      <div>
+        <p class="eyebrow">Next project</p>
+        <a class="footer-link" href="index.html">Back to all work</a>
+      </div>
+      <div>
+        <p class="eyebrow">Contact</p>
+        <a class="footer-link" href="mailto:jan.svaty@gmail.com">jan.svaty@gmail.com</a>
+        <a class="footer-link" href="https://www.linkedin.com/in/jansvaty/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
