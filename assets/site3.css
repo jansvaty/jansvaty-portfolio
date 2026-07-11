@@ -1190,7 +1190,7 @@ body.cs-editorial .button-outline:hover {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #999;
+  color: var(--muted);
   margin: 0;
 }
 
@@ -1579,7 +1579,7 @@ body.cs-editorial .button-outline:hover {
 }
 
 .cs-footer .eyebrow {
-  color: #bbb;
+  color: var(--muted);
   font-family: "DM Sans", sans-serif;
   font-size: 0.7rem;
 }
@@ -1797,7 +1797,7 @@ body.home-page h1 em {
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.14em;
-  color: #bbb;
+  color: var(--muted);
   margin: 0;
 }
 
@@ -1959,7 +1959,7 @@ body.home-page .hp-project h2 {
 .hp-location-old {
   font-family: "DM Sans", sans-serif;
   font-size: 0.85rem;
-  color: #bbb;
+  color: var(--muted);
   text-decoration: line-through;
   margin: 0;
   line-height: 1.5;
@@ -2132,7 +2132,7 @@ body.home-page .hp-project h2 {
   bottom: 1.25rem;
   left: 50%;
   transform: translateX(-50%);
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.78);
   font-family: "DM Sans", sans-serif;
   font-size: 0.78rem;
   white-space: nowrap;

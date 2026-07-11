@@ -5,12 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>var _t=localStorage.getItem("theme");if(_t)document.documentElement.setAttribute("data-theme",_t);</script>
   <title>Kiwi Compass | Jan Svaty</title>
-  <meta name="description" content="Kiwi Compass is a city-matching web app for New Zealanders moving to Australia - designed, built and shipped end-to-end by Jan Svaty.">
+  <meta name="description" content="Kiwi Compass is a city-matching web app for New Zealanders moving to Australia - designed, built, tested and shipped end-to-end by Jan Svaty.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/site3.css?v=24">
+  <link rel="stylesheet" href="assets/site3.css?v=25">
   <script src="assets/site.js?v=8" defer></script>
+  <style>
+    /* App palette accents within the case study */
+    .cs-kiwi-compass .cs-title { font-size: clamp(2.4rem, 5.4vw, 4.2rem); white-space: nowrap; }
+    .cs-kiwi-compass .cs-title em { color: #e13940; }
+    .cs-kiwi-compass .cs-eyebrow { color: #346eaa; }
+    [data-theme="dark"] .cs-kiwi-compass .cs-eyebrow { color: #7fb0e0; }
+    .cs-kiwi-compass .cs-prose a {
+      color: #346eaa;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    [data-theme="dark"] .cs-kiwi-compass .cs-prose a { color: #7fb0e0; }
+    /* Even 2x2 grid for four-card sections */
+    @media (min-width: 700px) {
+      .cs-kiwi-compass .cs-cards-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+  </style>
 </head>
 <body class="cs-editorial cs-kiwi-compass">
   <div class="site-shell cs-shell">
@@ -31,11 +49,11 @@
       <section class="cs-hero reveal">
         <div class="cs-hero-text">
           <p class="cs-tag">Case Study - Product Design &amp; Build</p>
-          <h1 class="cs-title">Kiwi<br><em style="color: #346eaa;">Compass</em></h1>
+          <h1 class="cs-title">Kiwi <em>Compass</em></h1>
           <div class="cs-meta" aria-label="Project details">
             <div class="cs-meta-row">
               <span class="cs-meta-label">Role</span>
-              <p class="cs-meta-value">Product design, data model, front-end build, brand</p>
+              <p class="cs-meta-value">Product design, data model, front-end build, brand, user testing</p>
             </div>
             <div class="cs-meta-row">
               <span class="cs-meta-label">Client</span>
@@ -60,11 +78,13 @@
 
         <section class="cs-section reveal">
           <p class="cs-eyebrow">Overview</p>
-          <div class="cs-section-split">
-            <h2>Which Australian city should a Kiwi actually move to?</h2>
+          <h2 class="ab-section-h2">Which Australian city should a Kiwi actually move to?</h2>
+          <div class="cs-section-split" style="margin-top: 1.5rem;">
             <div class="cs-prose">
               <p>Around 700,000 New Zealanders live in Australia, and thousands more make the move every year. Most pick their city on hearsay: a cousin in Brisbane, a forum thread, a friend's opinion of a place they visited once. It is a stressful, life-sized decision made with weekend-trip information.</p>
-              <p>I know the feeling first-hand. I have chosen a new city with a blank sheet more than once - Prague to British Columbia, Montreal, Calgary, Puerto Escondido, Auckland, Wellington - and I always wished a tool existed that would take my actual life and compare it against real data. So I designed and built one, end-to-end: research, data model, interface, brand, code and deployment.</p>
+            </div>
+            <div class="cs-prose">
+              <p>I know the feeling first-hand. I have chosen a new city with a blank sheet more than once - Prague to British Columbia, Montreal, Calgary, Puerto Escondido, Auckland, Wellington - and I always wished a tool existed that would take my actual life and compare it against real data. So I designed and built one, end-to-end: research, data model, interface, brand, code, testing and deployment.</p>
             </div>
           </div>
         </section>
@@ -72,7 +92,7 @@
         <section class="cs-section reveal">
           <p class="cs-eyebrow">How it works</p>
           <h2 class="ab-section-h2">Nine questions, your own weighting, a transparent answer</h2>
-          <div class="cs-cards">
+          <div class="cs-cards cs-cards-2">
             <article class="cs-card">
               <h3>Who you are, not who's average</h3>
               <p>Field of work, hobbies, weather preference, how you commute, where you holiday, social life, who's coming with you, the plan, and a rent-or-buy budget slider. Conditional factors - kids, pets, dating - only switch on when they apply.</p>
@@ -89,6 +109,30 @@
               <h3>The radar moment</h3>
               <p>Results open with a radar graph: your priorities as a filled shape, your best-matched city's fit as a dashed overlay. Wherever the dashed line dips inside your shape, the city under-delivers on something you care about. The chart explains the ranking at a glance.</p>
             </article>
+          </div>
+        </section>
+
+        <section class="cs-section reveal">
+          <p class="cs-eyebrow">Process</p>
+          <h2 class="ab-section-h2">How the data and the "back end" actually work</h2>
+          <div class="cs-section-split" style="margin-top: 1.5rem;">
+            <div class="cs-prose">
+              <p>There is no back end. The whole app is a handful of static files - HTML, CSS and JavaScript - served from GitHub Pages. Each of the twelve cities is a small profile of numbers and notes in a single data file: employment strength by industry, median rents and house prices, climate averages, direct flight routes, school, transport and pet-friendliness ratings. Every figure was compiled from an official source such as the ABS Census, the Bureau of Meteorology or BITRE, and the source is named next to it in the code and in the results.</p>
+            </div>
+            <div class="cs-prose">
+              <p>When someone answers the questions, their own browser does the maths: each city's profile is scored against their answers, multiplied by their importance sliders, and totalled into a percentage. Nothing they enter ever leaves their device, because there is no server to send it to. A service worker caches the files, so the app keeps working offline and installs to a phone's home screen like a native app. I wrote it in plain JavaScript - no framework, no build step - with the help of Claude Pro as my build partner.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="cs-section reveal">
+          <p class="cs-eyebrow">Testing</p>
+          <div class="cs-section-split">
+            <h2>Two rounds of testing with five users</h2>
+            <div class="cs-prose">
+              <p>I tested the app with five users across two rounds. The sessions focused on four areas: how people set their priorities, how well the factors aligned with what someone relocating to Australia actually weighs up, the overall UI, and usability evaluated against usability heuristics.</p>
+              <p>Both rounds fed directly back into the product - refining the factor set, the weighting step and the interface between iterations.</p>
+            </div>
           </div>
         </section>
 
