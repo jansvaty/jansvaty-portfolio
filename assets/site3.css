@@ -2154,6 +2154,14 @@ body.home-page .hp-project h2 {
   color: #b03562;
 }
 
+[data-theme="dark"] .ct-link {
+  color: #6b9fd4;
+}
+
+[data-theme="dark"] .ct-link:hover {
+  color: #e05880;
+}
+
 /* ─── About page ─────────────────────────── */
 
 .ab-hero {
