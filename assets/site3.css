@@ -1887,7 +1887,7 @@ body.home-page .hp-project h2 {
 }
 
 .hp-link:hover {
-  color: #b03562;
+  color: #c0392b;
 }
 
 .hp-customs-links {
@@ -2672,7 +2672,7 @@ html.intro-skip .intro-overlay {
 }
 
 [data-theme="dark"] .hp-link:hover {
-  color: #e05880;
+  color: #ff6b6b;
 }
 
 [data-theme="dark"] .hp-customs-row {
