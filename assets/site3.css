@@ -1726,9 +1726,9 @@ body.home-page .button-outline:hover {
 
 .hp-greeting-emoji {
   display: inline-block;
-  font-size: 2em;
+  height: 2em;
+  width: auto;
   vertical-align: middle;
-  line-height: 1;
 }
 
 .hp-greeting-text {
