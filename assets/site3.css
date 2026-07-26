@@ -2564,6 +2564,10 @@ html.intro-skip .intro-overlay {
   color: #e05880 !important;
 }
 
+[data-theme="dark"] .cs-stake .cs-title em {
+  color: #ff6b6b !important;
+}
+
 /* cs-editorial: hero + section dividers */
 [data-theme="dark"] .cs-hero,
 [data-theme="dark"] .cs-section {
