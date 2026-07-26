@@ -1989,7 +1989,13 @@ body.home-page .hp-project h2 {
   margin: 0;
 }
 
-.hp-footer-linkedin {
+.hp-footer-social {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.hp-footer-linkedin,
+.hp-footer-github {
   display: grid;
   place-items: center;
   width: 2.4rem;
@@ -1997,11 +2003,18 @@ body.home-page .hp-project h2 {
   font-size: 1rem;
   font-weight: 700;
   border-radius: 0.5rem;
-  background: #3f88cc;
   color: #fff;
   font-family: "DM Sans", sans-serif;
   text-transform: lowercase;
   text-decoration: none;
+}
+
+.hp-footer-linkedin {
+  background: #3f88cc;
+}
+
+.hp-footer-github {
+  background: #181717;
 }
 
 .hp-location-old {
