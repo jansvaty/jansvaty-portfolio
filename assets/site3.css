@@ -168,6 +168,12 @@ h3 {
   color: var(--muted);
 }
 
+.nav-toggle-group {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .nav-toggle {
   color: var(--muted);
   width: 3rem;
@@ -951,8 +957,20 @@ body.sharesies-page {
     gap: 0.75rem;
   }
 
+  .nav-toggle-group {
+    display: flex;
+  }
+
   .nav-toggle {
     display: flex;
+  }
+
+  .theme-toggle-mobile {
+    display: flex;
+  }
+
+  .site-nav .theme-toggle {
+    display: none;
   }
 
   .site-nav {
@@ -991,7 +1009,8 @@ body.sharesies-page {
     padding-top: 0.8rem;
   }
 
-  .home-header .nav-toggle {
+  .home-header .nav-toggle,
+  .home-header .theme-toggle-mobile {
     color: var(--ink-dark);
   }
 
@@ -2464,6 +2483,10 @@ html.intro-skip .intro-overlay {
   border-radius: 50%;
   flex-shrink: 0;
   transition: color 180ms ease, background 180ms ease;
+}
+
+.theme-toggle-mobile {
+  display: none;
 }
 
 .theme-toggle:hover {
