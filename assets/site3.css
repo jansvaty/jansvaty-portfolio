@@ -1731,6 +1731,18 @@ body.home-page .button-outline:hover {
   vertical-align: middle;
 }
 
+.hp-greeting-emoji--dark {
+  display: none;
+}
+
+[data-theme="dark"] .hp-greeting-emoji--light {
+  display: none;
+}
+
+[data-theme="dark"] .hp-greeting-emoji--dark {
+  display: inline-block;
+}
+
 .hp-greeting-text {
   font-size: 1.333em;
 }
