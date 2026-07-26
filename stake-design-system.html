@@ -16,6 +16,13 @@
       .mob-br { display: block; }
       .ab-section-h2 { white-space: normal; }
     }
+    .cs-stake .cs-prose a {
+      color: #c0392b;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    [data-theme="dark"] .cs-stake .cs-prose a { color: #ff6b6b; }
   </style>
 </head>
 <body class="cs-editorial cs-stake">
@@ -101,6 +108,10 @@
             <div class="cs-prose">
               <p>Because Stake already had public product surfaces, I used browser inspection and comparative review of public design systems to identify patterns worth formalising. The work was part reconstruction, part codification, and part forward-looking framework design.</p>
               <p>A large part of the value came from turning existing interface decisions into something documented, repeatable, and easier for teams to use consistently.</p>
+            </div>
+            <div class="cs-prose">
+              <p>The system was intentionally designed first in Figma, then translated into a code repository built in Python - keeping the design source of truth and the implementation in sync rather than letting them drift apart over time.</p>
+              <p><a href="https://www.figma.com/design/EJGkY9H6qAE90Zc6tRfrAD/STAKE-design-system?node-id=0-1&t=DwrerK2Vjw410KAb-1" target="_blank" rel="noreferrer">View the original Figma file</a></p>
             </div>
           </div>
           <img src="assets/images/stake-tool.png" alt="Stake design tool" style="width: 100%; display: block; margin-top: 3rem; border-radius: 12px;">
