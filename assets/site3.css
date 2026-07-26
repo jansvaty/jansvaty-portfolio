@@ -1728,7 +1728,7 @@ body.home-page .button-outline:hover {
   display: inline-block;
   height: 2em;
   width: auto;
-  vertical-align: middle;
+  vertical-align: text-bottom;
 }
 
 .hp-greeting-emoji--dark {
