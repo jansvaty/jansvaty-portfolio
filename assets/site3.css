@@ -2250,6 +2250,10 @@ body.home-page .hp-project h2 {
   width: fit-content;
 }
 
+.ab-hero-break-mobile {
+  display: none;
+}
+
 body.cs-editorial .ab-hero h1 {
   max-width: none;
   font-size: clamp(2.2rem, 4vw, 3.5rem);
@@ -2331,6 +2335,14 @@ body.cs-editorial .ab-section-h2 {
 }
 
 @media (max-width: 860px) {
+  .ab-hero-break-mobile {
+    display: block;
+  }
+
+  .ab-hero-break-desktop {
+    display: none;
+  }
+
   .ab-hero {
     grid-template-columns: 1fr;
   }
