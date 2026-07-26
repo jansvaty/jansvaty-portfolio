@@ -2256,7 +2256,7 @@ body.home-page .hp-project h2 {
 
 body.cs-editorial .ab-hero h1 {
   max-width: none;
-  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-size: clamp(1.85rem, calc(3.83vw - 2.79px), 2.7rem);
 }
 
 .ab-lead {
@@ -2341,6 +2341,10 @@ body.cs-editorial .ab-section-h2 {
 
   .ab-hero-break-desktop {
     display: none;
+  }
+
+  body.cs-editorial .ab-hero h1 {
+    font-size: clamp(1.35rem, 6.2vw, 2.1rem);
   }
 
   .ab-hero {
