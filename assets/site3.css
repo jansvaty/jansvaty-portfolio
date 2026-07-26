@@ -1716,6 +1716,10 @@ body.home-page .button-outline:hover {
   object-fit: cover;
 }
 
+.hp-hero-break-mobile {
+  display: none;
+}
+
 .hp-greeting {
   font-family: "DM Sans", sans-serif;
   font-size: clamp(1.6rem, 2.6vw, 2.1rem);
@@ -2035,6 +2039,14 @@ body.home-page .hp-project h2 {
 }
 
 @media (max-width: 600px) {
+
+  .hp-hero-break-mobile {
+    display: block;
+  }
+
+  .hp-hero-break-desktop {
+    display: none;
+  }
 
   .hp-hero,
   .hp-work,
