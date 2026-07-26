@@ -1698,6 +1698,10 @@ body.home-page .button-outline:hover {
   align-items: center;
 }
 
+.hp-hero-inner:only-child {
+  grid-column: 1 / -1;
+}
+
 .hp-hero-video {
   border-radius: 1rem;
   overflow: hidden;
