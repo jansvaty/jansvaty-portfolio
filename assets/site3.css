@@ -2344,7 +2344,7 @@ body.cs-editorial .ab-section-h2 {
   }
 
   body.cs-editorial .ab-hero h1 {
-    font-size: clamp(1.35rem, 6.2vw, 2.1rem);
+    font-size: clamp(1.3rem, calc(8.13vw - 5.24px), 2.3rem);
   }
 
   .ab-hero {
