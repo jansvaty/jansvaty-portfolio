@@ -1724,6 +1724,13 @@ body.home-page .button-outline:hover {
   line-height: 1.4;
 }
 
+.hp-greeting-emoji {
+  display: inline-block;
+  font-size: 2em;
+  vertical-align: middle;
+  line-height: 1;
+}
+
 body.home-page h1 {
   font-size: clamp(2.4rem, 4vw, 3.6rem);
   line-height: 1.05;
