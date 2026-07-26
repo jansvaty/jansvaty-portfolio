@@ -5,7 +5,7 @@ if (introOverlay && !document.documentElement.classList.contains('intro-skip')) 
   setTimeout(() => {
     introOverlay.classList.add('is-leaving');
     introOverlay.addEventListener('animationend', () => introOverlay.remove(), { once: true });
-  }, 2400);
+  }, 1800);
 }
 
 // Dark / light mode toggle
