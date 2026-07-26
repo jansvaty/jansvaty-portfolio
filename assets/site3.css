@@ -1731,6 +1731,10 @@ body.home-page .button-outline:hover {
   line-height: 1;
 }
 
+.hp-greeting-text {
+  font-size: 1.333em;
+}
+
 body.home-page h1 {
   font-size: clamp(2.4rem, 4vw, 3.6rem);
   line-height: 1.05;
