@@ -434,10 +434,15 @@ h3 {
   gap: 0.45rem;
 }
 
+/* The visible transition is driven by site.js via the Web Animations API
+   (not a CSS transition on the class change — that's what could leave
+   elements permanently stuck invisible, see site.js). These two rules are
+   just the pre/post states: the JS animation bridges between them, and
+   .is-visible alone is also the complete, correct end state on its own for
+   the prefers-reduced-motion path, which skips the animation entirely. */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 560ms ease, transform 560ms ease;
 }
 
 .reveal.is-visible {

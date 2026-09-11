@@ -29,16 +29,40 @@ if (navToggle && nav) {
   });
 }
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.15 }
-);
+// Scroll-triggered reveal. This used to toggle an "is-visible" class and let
+// a CSS transition animate opacity/transform on it. That could leave
+// elements permanently stuck at opacity:0 with "is-visible" already added
+// and nothing visibly wrong in the markup — a race when several elements
+// crossed the intersection threshold in the same callback batch (e.g. a
+// fast scroll) let a second, competing transition start on top of the
+// first, and the two never resolved. Driving the animation explicitly with
+// the Web Animations API sidesteps that entirely: it doesn't depend on the
+// CSS cascade or a class-change being detected as a transition-worthy
+// style change, and `fill: "forwards"` guarantees the end state holds.
+const REVEAL_KEYFRAMES = [
+  { opacity: 0, transform: "translateY(24px)" },
+  { opacity: 1, transform: "translateY(0)" },
+];
+const REVEAL_OPTIONS = { duration: 560, easing: "ease", fill: "forwards" };
 
-document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const revealElements = document.querySelectorAll(".reveal");
+
+if (prefersReducedMotion) {
+  revealElements.forEach((element) => element.classList.add("is-visible"));
+} else {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const target = entry.target;
+        observer.unobserve(target);
+        target.classList.add("is-visible");
+        target.animate(REVEAL_KEYFRAMES, REVEAL_OPTIONS);
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  revealElements.forEach((element) => observer.observe(element));
+}
