@@ -58,7 +58,18 @@ if (prefersReducedMotion) {
         const target = entry.target;
         observer.unobserve(target);
         target.classList.add("is-visible");
-        target.animate(REVEAL_KEYFRAMES, REVEAL_OPTIONS);
+        const anim = target.animate(REVEAL_KEYFRAMES, REVEAL_OPTIONS);
+        // fill:"forwards" holds the animation's own end state on the
+        // element indefinitely — which also means it outranks any later
+        // CSS rule trying to change the same properties (e.g. a :hover
+        // lift on a card), since an active animation's effect sits above
+        // the normal cascade. .reveal.is-visible already carries the same
+        // end values in plain CSS, so once the animation has genuinely
+        // finished, cancel it to hand control back to the stylesheet.
+        // (anim.finished is not used here — it doesn't reliably resolve
+        // for animations created this way, e.g. in a backgrounded tab —
+        // so a plain timeout matching the known duration is used instead.)
+        setTimeout(() => anim.cancel(), REVEAL_OPTIONS.duration);
       });
     },
     { threshold: 0.15 }
