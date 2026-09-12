@@ -1759,21 +1759,9 @@ body.home-page .button-outline:hover {
 
 .hp-greeting-emoji {
   display: inline-block;
-  height: 2em;
-  width: auto;
-  vertical-align: text-bottom;
-}
-
-.hp-greeting-emoji--dark {
-  display: none;
-}
-
-[data-theme="dark"] .hp-greeting-emoji--light {
-  display: none;
-}
-
-[data-theme="dark"] .hp-greeting-emoji--dark {
-  display: inline-block;
+  font-size: 2em;
+  vertical-align: middle;
+  line-height: 1;
 }
 
 .hp-greeting-text {
