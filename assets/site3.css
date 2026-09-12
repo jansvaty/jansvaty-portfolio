@@ -1818,33 +1818,9 @@ body.home-page h1 em {
 
 /* Work section */
 .hp-work {
-  position: relative;
   width: min(1200px, calc(100% - 4rem));
   margin: 0 auto;
   padding: 4rem 0 6rem;
-}
-
-/* body.home-page overrides the body background to a flat tone (see below),
-   so this section gets its own soft wash — glass/backdrop-blur only reads
-   as glass when there's some color variation behind it to diffuse; over a
-   flat tone it just looks like a plain translucent box. Scoped to this
-   section rather than the whole homepage so the hero stays clean. */
-.hp-work::before {
-  content: "";
-  position: absolute;
-  inset: -2rem -2rem 0;
-  z-index: -1;
-  background:
-    radial-gradient(circle at 12% 8%, rgba(201, 93, 61, 0.16), transparent 34%),
-    radial-gradient(circle at 88% 6%, rgba(35, 118, 120, 0.12), transparent 30%),
-    radial-gradient(circle at 30% 92%, rgba(201, 93, 61, 0.08), transparent 32%);
-}
-
-[data-theme="dark"] .hp-work::before {
-  background:
-    radial-gradient(circle at 12% 8%, rgba(217, 113, 79, 0.14), transparent 34%),
-    radial-gradient(circle at 88% 6%, rgba(60, 150, 150, 0.11), transparent 30%),
-    radial-gradient(circle at 30% 92%, rgba(217, 113, 79, 0.08), transparent 32%);
 }
 
 .hp-work-label {
